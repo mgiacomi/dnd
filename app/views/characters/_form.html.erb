@@ -1,0 +1,39 @@
+<%= form_for(@character) do |f| %>
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  Name: <%= f.text_field :name %><br/>
+  Race: <%= f.text_field :race %><br/>
+  Class: <%= f.text_field :classy %><br/>
+  Player: <%= f.text_field :player %><br/>
+  Align: <%= f.text_field :align %><br/>
+  Background: <%= f.text_field :background %><br/>
+  Exp: <%= f.text_field :xp %><br/>
+  Level: <%= f.text_field :level %><br/>
+  HP: <%= f.text_field :hp %><br/>
+  Strength: <%= f.text_field :str %><br/>
+  Str Mod: <%= f.text_field :str_mod %><br/>
+  Dexterity: <%= f.text_field :dex %><br/>
+  Dex Mod: <%= f.text_field :dex_mod %><br/>
+  Constitution: <%= f.text_field :con %><br/>
+  Con Mod: <%= f.text_field :con_mod %><br/>
+  Intelligence: <%= f.text_field :int %><br/>
+  Int Mod: <%= f.text_field :int_mod %><br/>
+  Wisdom: <%= f.text_field :wis %><br/>
+  Wis Mod: <%= f.text_field :wis_mod %><br/>
+  Charisma: <%= f.text_field :cha %><br/>
+  Cha Mod: <%= f.text_field :cha_mod %><br/>
+  Proficency: <%= f.text_field :pro_bo %><br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
