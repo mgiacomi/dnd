@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
+weapon = Weapon.new(category: 'Simple Melee', name: 'club', cost: '1 sp', damage: '1d4 bludgeoning', weight: 2)
+property = Weaponprop.new(weapon: weapon, name: 'Light')
