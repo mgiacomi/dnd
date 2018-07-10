@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_050618) do
+ActiveRecord::Schema.define(version: 2018_07_10_041733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_050618) do
   create_table "armors", force: :cascade do |t|
     t.string "category", limit: 55
     t.string "name", limit: 55
-    t.integer "cost"
+    t.string "cost", limit: 55
     t.integer "ac"
     t.integer "weight"
     t.datetime "created_at", null: false
@@ -75,6 +75,14 @@ ActiveRecord::Schema.define(version: 2018_07_09_050618) do
     t.bigint "weapon_id", null: false
     t.index ["character_id", "weapon_id"], name: "index_characters_weapons_on_character_id_and_weapon_id"
     t.index ["weapon_id", "character_id"], name: "index_characters_weapons_on_weapon_id_and_character_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name", limit: 55
+    t.string "cost", limit: 55
+    t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "weaponprops", force: :cascade do |t|
