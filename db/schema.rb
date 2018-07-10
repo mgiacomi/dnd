@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2018_07_09_050618) do
 
   create_table "armorprops", force: :cascade do |t|
     t.bigint "armor_id"
+    t.string "name", limit: 55
+    t.string "attr", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["armor_id"], name: "index_armorprops_on_armor_id"
@@ -78,7 +80,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_050618) do
   create_table "weaponprops", force: :cascade do |t|
     t.bigint "weapon_id"
     t.string "name", limit: 55
-    t.string "attribute", limit: 255
+    t.string "attr", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["weapon_id"], name: "index_weaponprops_on_weapon_id"
