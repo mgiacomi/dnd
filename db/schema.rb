@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 2018_07_09_050618) do
   end
 
   create_table "armors", force: :cascade do |t|
-    t.string "type", limit: 55
+    t.string "category", limit: 55
     t.string "name", limit: 55
-    t.integer "weight"
     t.integer "cost"
     t.integer "ac"
+    t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -85,11 +85,11 @@ ActiveRecord::Schema.define(version: 2018_07_09_050618) do
   end
 
   create_table "weapons", force: :cascade do |t|
-    t.string "type", limit: 55
+    t.string "category", limit: 55
     t.string "name", limit: 55
+    t.string "cost", limit: 55
+    t.string "damage", limit: 55
     t.integer "weight"
-    t.integer "cost"
-    t.integer "damage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
