@@ -1,7 +1,7 @@
 class CreateCharacters < ActiveRecord::Migration[5.2]
   def change
     create_table "characters" do |t|
-      t.integer  "type",        limit: 4
+      t.string   "team",        limit: 55
       t.string   "name",        limit: 55
       t.string   "race",        limit: 55
       t.string   "classy",      limit: 55

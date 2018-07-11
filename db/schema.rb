@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
   end
 
   create_table "characters", force: :cascade do |t|
-    t.integer "type"
+    t.string "team", limit: 55
     t.string "name", limit: 55
     t.string "race", limit: 55
     t.string "classy", limit: 55
