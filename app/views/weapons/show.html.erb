@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @weapon.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @weapon.name %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @weapon.cost %>
+</p>
+
+<p>
+  <strong>Damage:</strong>
+  <%= @weapon.damage %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @weapon.weight %>
+</p>
+
+<%= link_to 'Edit', edit_weapon_path(@weapon) %> |
+<%= link_to 'Back', weapons_path %>

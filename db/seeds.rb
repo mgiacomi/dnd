@@ -9,12 +9,12 @@
 ####################################################
 ##  Weapons
 ####################################################
-weapon = Weapon.new(category: 'Simple Melee', name: 'club', cost: '1 sp', damage: '1d4 bludgeoning', weight: 2)
+weapon = Weapon.new(category: 'Simple Melee', name: 'Club', cost: '1 sp', damage: '1d4 bludgeoning', weight: 2)
 weapon.save
 property = Weaponprop.new(weapon: weapon, name: 'Light')
 property.save
 
-weapon = Weapon.new(category: 'Simple Melee', name: 'dagger', cost: '2 gp', damage: '1d4 piercing', weight: 1)
+weapon = Weapon.new(category: 'Simple Melee', name: 'Dagger', cost: '2 gp', damage: '1d4 piercing', weight: 1)
 weapon.save
 property = Weaponprop.new(weapon: weapon, name: 'Fittness')
 property.save
