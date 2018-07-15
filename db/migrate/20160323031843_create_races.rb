@@ -3,12 +3,13 @@ class CreateRaces < ActiveRecord::Migration[5.2]
     create_table "Races" do |t|
       t.string  "name",                 limit: 55
       t.text    "desc"
-      t.int     "ability_str_incr",     limit: 4
-      t.int     "ability_dex_incr",     limit: 4
-      t.int     "ability_con_incr",     limit: 4
-      t.int     "ability_int_incr",     limit: 4
-      t.int     "ability_wis_incr",     limit: 4
-      t.int     "ability_cha_incr",     limit: 4
+      t.int     "speed",        limit: 4
+      t.int     "str_incr",     limit: 4
+      t.int     "dex_incr",     limit: 4
+      t.int     "con_incr",     limit: 4
+      t.int     "int_incr",     limit: 4
+      t.int     "wis_incr",     limit: 4
+      t.int     "cha_incr",     limit: 4
 
       t.timestamps
     end

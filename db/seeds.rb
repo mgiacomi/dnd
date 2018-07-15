@@ -9,7 +9,21 @@
 ####################################################
 ##  Races
 ####################################################
-race = Race.new()
+Race.new(name: 'Dragonborn', desc: '', speed: 30, str_incr: 2, dex_incr: 0, con_incr: 0, int_incr: 0, wis_incr: 0, cha_incr: 1).save
+Race.new(name: 'Hill Dwarf', desc: '', speed: 25, str_incr: 0, dex_incr: 0, con_incr: 2, int_incr: 0, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Mountian Dwarf', desc: '', speed: 25, str_incr: 2, dex_incr: 0, con_incr: 2, int_incr: 0, wis_incr: 1, cha_incr: 0).save
+Race.new(name: 'High Elf', desc: '', speed: 30, str_incr: 0, dex_incr: 2, con_incr: 0, int_incr: 1, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Wood Elf', desc: '', speed: 30, str_incr: 0, dex_incr: 2, con_incr: 0, int_incr: 0, wis_incr: 1, cha_incr: 0).save
+Race.new(name: 'Dark Elf', desc: '', speed: 30, str_incr: 0, dex_incr: 2, con_incr: 0, int_incr: 0, wis_incr: 0, cha_incr: 1).save
+Race.new(name: 'Stout Halfling', desc: '', speed: 25, str_incr: 0, dex_incr: 2, con_incr: 1, int_incr: 0, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Lightfoot Halfling', desc: '', speed: 25, str_incr: 0, dex_incr: 2, con_incr: 0, int_incr: 0, wis_incr: 0, cha_incr: 1).save
+Race.new(name: 'Human', desc: '', speed: 30, str_incr: 1, dex_incr: 1, con_incr: 1, int_incr: 1, wis_incr: 1, cha_incr: 1).save
+Race.new(name: 'Forest Gnome', desc: '', speed: 25, str_incr: 0, dex_incr: 1, con_incr: 0, int_incr: 2, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Rock Gnome', desc: '', speed: 25, str_incr: 0, dex_incr: 0, con_incr: 1, int_incr: 2, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Half-Elf', desc: '', speed: 30, str_incr: 0, dex_incr: 0, con_incr: 0, int_incr: 0, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Half-Orc', desc: '', speed: 30, str_incr: 2, dex_incr: 0, con_incr: 1, int_incr: 0, wis_incr: 0, cha_incr: 0).save
+Race.new(name: 'Tiefling', desc: '', speed: 30, str_incr: 0, dex_incr: 0, con_incr: 0, int_incr: 1, wis_incr: 0, cha_incr: 2).save
+
 ####################################################
 ##  Genres
 ####################################################
