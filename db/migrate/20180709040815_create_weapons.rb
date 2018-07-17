@@ -1,6 +1,7 @@
 class CreateWeapons < ActiveRecord::Migration[5.2]
   def change
     create_table :weapons do |t|
+      t.string   "group",       limit: 55
       t.string   "category",    limit: 55
       t.string   "name",        limit: 55
       t.string   "cost",        limit: 55

@@ -15,28 +15,8 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Races", force: :cascade do |t|
-    t.string "name", limit: 55
-    t.text "desc"
-    t.string "hit_die", limit: 55
-    t.integer "hp_start"
-    t.integer "hp_plus_level"
-    t.string "saving_throws", limit: 55
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "armorprops", force: :cascade do |t|
-    t.bigint "armor_id"
-    t.string "name", limit: 55
-    t.string "attr", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["armor_id"], name: "index_armorprops_on_armor_id"
-  end
-
   create_table "armors", force: :cascade do |t|
-    t.string "category", limit: 55
+    t.string "group", limit: 55
     t.string "name", limit: 55
     t.string "cost", limit: 55
     t.integer "ac"
@@ -51,6 +31,13 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.integer "qty"
     t.index ["armor_id", "character_id"], name: "index_armors_characters_on_armor_id_and_character_id"
     t.index ["character_id", "armor_id"], name: "index_armors_characters_on_character_id_and_armor_id"
+  end
+
+  create_table "armors_genres", id: false, force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "armor_id", null: false
+    t.index ["armor_id", "genre_id"], name: "index_armors_genres_on_armor_id_and_genre_id"
+    t.index ["genre_id", "armor_id"], name: "index_armors_genres_on_genre_id_and_armor_id"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -69,10 +56,6 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.integer "int"
     t.integer "wis"
     t.integer "cha"
-    t.integer "pro_bo"
-    t.string "skill_1", limit: 55
-    t.string "skill_2", limit: 55
-    t.string "skill_3", limit: 55
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -85,6 +68,13 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.index ["item_id"], name: "index_characters_items_on_item_id_and_item_id"
   end
 
+  create_table "characters_skills", id: false, force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "skill_id", null: false
+    t.index ["character_id", "skill_id"], name: "index_characters_skills_on_character_id_and_skill_id"
+    t.index ["skill_id", "character_id"], name: "index_characters_skills_on_skill_id_and_character_id"
+  end
+
   create_table "characters_weapons", id: false, force: :cascade do |t|
     t.bigint "character_id", null: false
     t.bigint "weapon_id", null: false
@@ -94,14 +84,50 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
   end
 
   create_table "genres", force: :cascade do |t|
+    t.string "name", limit: 55
+    t.text "desc"
+    t.string "hit_die", limit: 55
+    t.integer "hp_start"
+    t.integer "hp_plus_level"
+    t.string "saving_throws", limit: 255
+    t.string "armor_prof", limit: 255
+    t.string "weapon_prof", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "genres_skills", id: false, force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "skill_id", null: false
+    t.index ["genre_id", "skill_id"], name: "index_genres_skills_on_genre_id_and_skill_id"
+    t.index ["skill_id", "genre_id"], name: "index_genres_skills_on_skill_id_and_genre_id"
+  end
+
+  create_table "genres_weapons", id: false, force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "weapon_id", null: false
+    t.index ["genre_id", "weapon_id"], name: "index_genres_weapons_on_genre_id_and_weapon_id"
+    t.index ["weapon_id", "genre_id"], name: "index_genres_weapons_on_weapon_id_and_genre_id"
   end
 
   create_table "items", force: :cascade do |t|
     t.string "name", limit: 55
     t.string "cost", limit: 55
     t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "name", limit: 55
+    t.text "desc"
+    t.integer "speed"
+    t.integer "str_incr"
+    t.integer "dex_incr"
+    t.integer "con_incr"
+    t.integer "int_incr"
+    t.integer "wis_incr"
+    t.integer "cha_incr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -124,6 +150,7 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
   end
 
   create_table "weapons", force: :cascade do |t|
+    t.string "group", limit: 55
     t.string "category", limit: 55
     t.string "name", limit: 55
     t.string "cost", limit: 55
@@ -133,6 +160,5 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "armorprops", "armors"
   add_foreign_key "weaponprops", "weapons"
 end

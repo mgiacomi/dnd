@@ -16,12 +16,8 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
       t.integer  "int",         limit: 4
       t.integer  "wis",         limit: 4
       t.integer  "cha",         limit: 4
-      t.integer  "pro_bo",      limit: 4
-      t.string   "skill_1",     limit: 55
-      t.string   "skill_2",     limit: 55
-      t.string   "skill_3",     limit: 55
-      t.string   "skill_4",     limit: 55
       t.timestamps
     end
   end
 end
+
