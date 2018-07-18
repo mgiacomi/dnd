@@ -381,25 +381,114 @@ Item.new(name: 'Whetstone', cost: '1 cp', weight: 1).save
 ####################################################
 ##  Characters
 ####################################################
-char1 = Character.new(
+feren = Character.new(
+    race_id: wood_elf.id,
+    genre_id: ranger.id,
+    team: Character::PLAYER,
+    name: 'Feren',
+    player: 'Cain',
+    align: 'Neutral good',
+    background: 'Outlander',
+    xp: 2155,
+    hp: ranger.hp_start,
+    str: 12,
+    dex: 17,
+    con: 14,
+    int: 10,
+    wis: 15,
+    cha: 8
+)
+feren.skills << acrobatics
+feren.skills << animal_handling
+feren.skills << perception
+feren.skills << stealth
+feren.save
+
+thorirn = Character.new(
+    race_id: half_elf.id,
+    genre_id: sorcerer.id,
+    team: Character::PLAYER,
+    name: 'Thorirn',
+    player: 'Cain',
+    align: 'Chaotic good',
+    background: 'Hermit',
+    xp: 2155,
+    hp: sorcerer.hp_start,
+    str: 10,
+    dex: 12,
+    con: 14,
+    int: 13,
+    wis: 8,
+    cha: 15
+)
+thorirn.skills << deception
+thorirn.skills << intimidation
+thorirn.skills << performance
+thorirn.skills << persuasion
+thorirn.save
+
+bob = Character.new(
+    race_id: dragonborn.id,
+    genre_id: paladin.id,
+    team: Character::PLAYER,
+    name: 'Bob',
+    player: 'Cy',
+    align: 'Lawful good',
+    background: 'Noble',
+    xp: 2155,
+    hp: paladin.hp_start,
+    str: 17,
+    dex: 10,
+    con: 13,
+    int: 8,
+    wis: 12,
+    cha: 15
+)
+bob.skills << athletics
+bob.skills << intimidation
+bob.save
+
+cutie = Character.new(
+    race_id: half_orc.id,
+    genre_id: barbarian.id,
+    team: Character::PLAYER,
+    name: 'Cutie',
+    player: 'Cy',
+    align: 'Chaotic neutral',
+    background: 'Outlander',
+    xp: 2155,
+    hp: barbarian.hp_start,
+    str: 17,
+    dex: 13,
+    con: 15,
+    int: 10,
+    wis: 12,
+    cha: 8
+)
+cutie.skills << athletics
+cutie.skills << nature
+cutie.save
+
+savage = Character.new(
     race_id: human.id,
     genre_id: fighter.id,
     team: Character::PLAYER,
-    name: 'Savage Cabage',
+    name: 'Savage',
     player: 'Rebecca',
     align: 'Lawful good',
-    background: 'Acolyte',
-    xp: 0,
+    background: 'Folk hero',
+    xp: 2155,
     hp: fighter.hp_start,
-    str: 15,
-    dex: 12,
-    con: 14,
-    int: 8,
-    wis: 9,
-    cha: 10
+    str: 14,
+    dex: 16,
+    con: 15,
+    int: 11,
+    wis: 13,
+    cha: 9
 )
-char1.skills << athletics
-char1.skills << intimidation
-char1.skills << survival
-char1.save
+savage.skills << animal_handling
+savage.skills << history
+savage.skills << perception
+savage.skills << survival
+savage.save
 
