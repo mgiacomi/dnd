@@ -8,7 +8,11 @@ module CharacterExt
   end
 
   def hp_max
-    self.genre.hp_start + con_mod + (self.genre.hp_plus_level + con_mod * level)
+    hp = self.genre.hp_start + con_mod
+    if level > 1
+      hp = (self.genre.hp_start + con_mod) + ((self.genre.hp_plus_level + con_mod) * (level - 1))
+    end
+    hp
   end
 
   def level
@@ -74,30 +78,43 @@ module CharacterExt
   end
 
   def str_mod
-    'todo_str_mod'
+    (self.str - 10) / 2
   end
 
   def dex_mod
-    'todo_dex_mod'
+    (self.dex - 10) / 2
   end
 
   def con_mod
-    'todo_con_mod'
+    (self.con - 10) / 2
   end
 
   def int_mod
-    'todo_int_mod'
+    (self.int - 10) / 2
   end
 
   def wis_mod
-    'todo_wis_mod'
+    (self.wis - 10) / 2
   end
 
   def cha_mod
-    'todo_cha_mod'
+    (self.cha - 10) / 2
   end
 
   def pro_bo
-    'todo_pro_bo'
+    if level > 16
+      return 6
+    end
+    if level > 12
+      return 5
+    end
+    if level > 8
+      return 4
+    end
+    if level > 4
+      return 3
+    end
+
+    2
   end
 end
