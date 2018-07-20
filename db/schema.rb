@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_10_041733) do
+ActiveRecord::Schema.define(version: 2018_07_10_041744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
   create_table "armors", force: :cascade do |t|
     t.string "group", limit: 55
     t.string "name", limit: 55
-    t.string "cost", limit: 55
+    t.integer "cost_qty"
+    t.string "cost_unit", limit: 55
     t.integer "ac"
     t.integer "weight"
     t.datetime "created_at", null: false
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
   end
 
   create_table "characters", force: :cascade do |t|
+    t.integer "condition_id"
     t.integer "race_id"
     t.integer "genre_id"
     t.string "team", limit: 55
@@ -64,8 +66,8 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.bigint "character_id", null: false
     t.bigint "item_id", null: false
     t.integer "qty"
+    t.index ["character_id", "item_id"], name: "index_characters_items_on_character_id_and_item_id"
     t.index ["item_id", "character_id"], name: "index_characters_items_on_item_id_and_character_id"
-    t.index ["item_id"], name: "index_characters_items_on_item_id_and_item_id"
   end
 
   create_table "characters_skills", id: false, force: :cascade do |t|
@@ -81,6 +83,23 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.integer "qty"
     t.index ["character_id", "weapon_id"], name: "index_characters_weapons_on_character_id_and_weapon_id"
     t.index ["weapon_id", "character_id"], name: "index_characters_weapons_on_weapon_id_and_character_id"
+  end
+
+  create_table "conditions", force: :cascade do |t|
+    t.string "name", limit: 55
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.integer "level_id"
+    t.integer "genre_id"
+    t.string "subclass", limit: 55
+    t.string "name", limit: 55
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|
@@ -112,7 +131,8 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
 
   create_table "items", force: :cascade do |t|
     t.string "name", limit: 55
-    t.string "cost", limit: 55
+    t.integer "cost_qty"
+    t.string "cost_unit", limit: 55
     t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -153,7 +173,8 @@ ActiveRecord::Schema.define(version: 2018_07_10_041733) do
     t.string "group", limit: 55
     t.string "category", limit: 55
     t.string "name", limit: 55
-    t.string "cost", limit: 55
+    t.integer "cost_qty"
+    t.string "cost_unit", limit: 55
     t.string "damage", limit: 55
     t.integer "weight"
     t.datetime "created_at", null: false

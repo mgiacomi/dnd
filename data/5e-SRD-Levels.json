@@ -64,6 +64,10 @@
       {
         "name": "Primal Path",
         "url": "http://www.dnd5eapi.co/api/features/5"
+      },
+      {
+        "name": "Frenzy",
+        "url": "http://www.dnd5eapi.co/api/features/6"
       }
     ],
     "class_specific": {
@@ -86,7 +90,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/7"
       }
     ],
@@ -136,7 +140,12 @@
     "ability_score_bonuses": 1,
     "prof_bonus": 3,
     "feature_choices": [],
-    "features": [],
+    "features": [
+      {
+        "name": "Feral Instinct",
+        "url": "http://www.dnd5eapi.co/api/features/11"
+      }
+    ],
     "spellcasting": {},
     "class_specific": {
       "rage_count": 4,
@@ -183,8 +192,8 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Feral Instinct",
-        "url": "http://www.dnd5eapi.co/api/features/11"
+        "name": "Ability Score Improvement",
+        "url": "http://www.dnd5eapi.co/api/features/12"
       }
     ],
     "spellcasting": {},
@@ -208,8 +217,8 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
-        "url": "http://www.dnd5eapi.co/api/features/12"
+        "name": "Brutal Critical (1 dice)",
+        "url": "http://www.dnd5eapi.co/api/features/13"
       }
     ],
     "spellcasting": {},
@@ -230,7 +239,12 @@
     "level": 10,
     "ability_score_bonuses": 2,
     "prof_bonus": 4,
-    "feature_choices": [],
+    "feature_choices": [
+      {
+        "name": "Retaliation",
+        "url": "http://www.dnd5eapi.co/api/features/14"
+      }
+    ],
     "features": [],
     "spellcasting": {},
     "class_specific": {
@@ -278,7 +292,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/16"
       }
     ],
@@ -324,7 +338,12 @@
     "ability_score_bonuses": 3,
     "prof_bonus": 5,
     "feature_choices": [],
-    "features": [],
+    "features": [
+      {
+        "name": "Retaliation",
+        "url": "http://www.dnd5eapi.co/api/features/18"
+      }
+    ],
     "class_specific": {
       "rage_count": 5,
       "rage_damage_bonus": 3,
@@ -369,7 +388,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/20"
       }
     ],
@@ -441,7 +460,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/23"
       }
     ],
@@ -465,7 +484,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Fast Movement",
+        "name": "Primal Champion",
         "url": "http://www.dnd5eapi.co/api/features/24"
       }
     ],
@@ -623,7 +642,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/51"
       }
     ],
@@ -777,7 +796,7 @@
     "prof_bonus": 3,
     "feature_choices": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/56"
       }
     ],
@@ -938,7 +957,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/61"
       }
     ],
@@ -1094,7 +1113,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/66"
       }
     ],
@@ -1211,7 +1230,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/69"
       }
     ],
@@ -1409,7 +1428,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/80"
       }
     ],
@@ -1557,7 +1576,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/86"
       },
       {
@@ -1705,7 +1724,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/92"
       }
     ],
@@ -1839,7 +1858,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/94"
       }
     ],
@@ -1951,7 +1970,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/98"
       }
     ],
@@ -2138,7 +2157,7 @@
         "url": "http://www.dnd5eapi.co/api/features/115"
       },
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/116"
       }
     ],
@@ -2271,7 +2290,7 @@
         "url": "http://www.dnd5eapi.co/api/features/120"
       },
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/121"
       }
     ],
@@ -2400,7 +2419,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/124"
       }
     ],
@@ -2529,7 +2548,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/126"
       }
     ],
@@ -2636,7 +2655,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/129"
       }
     ],
@@ -2792,7 +2811,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/142"
       }
     ],
@@ -2842,7 +2861,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/144"
       }
     ],
@@ -2887,7 +2906,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/146"
       }
     ],
@@ -2982,7 +3001,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/150"
       }
     ],
@@ -3032,7 +3051,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/152"
       }
     ],
@@ -3077,7 +3096,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 6",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/154"
       }
     ],
@@ -3147,7 +3166,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 7",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/158"
       }
     ],
@@ -3305,7 +3324,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/170"
       },
       {
@@ -3429,7 +3448,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/178"
       }
     ],
@@ -3536,7 +3555,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/182"
       }
     ],
@@ -3648,7 +3667,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/186"
       }
     ],
@@ -3727,7 +3746,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/189"
       }
     ],
@@ -3895,7 +3914,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/206"
       }
     ],
@@ -3998,7 +4017,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/210"
       }
     ],
@@ -4093,7 +4112,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/213"
       }
     ],
@@ -4187,7 +4206,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/216"
       }
     ],
@@ -4257,7 +4276,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/218"
       }
     ],
@@ -4408,7 +4427,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/234"
       }
     ],
@@ -4531,7 +4550,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/242"
       },
       {
@@ -4653,7 +4672,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/249"
       }
     ],
@@ -4771,7 +4790,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/256"
       }
     ],
@@ -4859,7 +4878,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/258"
       }
     ],
@@ -5008,7 +5027,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/286"
       }
     ],
@@ -5112,7 +5131,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/290"
       }
     ],
@@ -5138,7 +5157,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/290"
       }
     ],
@@ -5164,7 +5183,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/292"
       }
     ],
@@ -5216,7 +5235,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/294"
       }
     ],
@@ -5315,7 +5334,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/298"
       }
     ],
@@ -5388,7 +5407,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 6",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/301"
       }
     ],
@@ -5605,7 +5624,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/329"
       }
     ],
@@ -5822,7 +5841,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/331"
       }
     ],
@@ -6044,7 +6063,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/333"
       }
     ],
@@ -6261,7 +6280,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/335"
       }
     ],
@@ -6430,7 +6449,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/338"
       }
     ],
@@ -6667,7 +6686,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/380"
       }
     ],
@@ -6818,7 +6837,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/384"
       }
     ],
@@ -6969,7 +6988,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/388"
       },
       {
@@ -7128,7 +7147,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/394"
       }
     ],
@@ -7245,7 +7264,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 6",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/397"
       }
     ],
@@ -7428,7 +7447,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 1",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/398"
       }
     ],
@@ -7549,7 +7568,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 2",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/400"
       }
     ],
@@ -7670,7 +7689,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 3",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/402"
       }
     ],
@@ -7791,7 +7810,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 4",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/404"
       }
     ],
@@ -7888,7 +7907,7 @@
     "feature_choices": [],
     "features": [
       {
-        "name": "Ability Score Improvement 5",
+        "name": "Ability Score Improvement",
         "url": "http://www.dnd5eapi.co/api/features/406"
       }
     ],
@@ -7948,94 +7967,6 @@
     },
     "subclass": {},
     "url": "http://www.dnd5eapi.co/api/classes/wizard/level/20"
-  },
-  {
-    "level": 3,
-    "feature_choices": [],
-    "features": [
-      {
-        "name": "Primal Path",
-        "url": "http://www.dnd5eapi.co/api/features/5"
-      },
-      {
-        "name": "Frenzy",
-        "url": "http://www.dnd5eapi.co/api/features/6"
-      }
-    ],
-    "spellcasting": {},
-    "class": {
-      "name": "Barbarian",
-      "url": "http://www.dnd5eapi.co/api/classes/barbarian"
-    },
-    "subclass": {
-      "name": "Berserker",
-      "url": "http://www.dnd5eapi.co/api/subclasses/1"
-    },
-    "url": "http://www.dnd5eapi.co/api/subclasses/berserker/level/3",
-    "index": 241
-  },
-  {
-    "level": 6,
-    "feature_choices": [],
-    "features": [
-      {
-        "name": "Mindless Rage",
-        "url": "http://www.dnd5eapi.co/api/features/10"
-      }
-    ],
-    "spellcasting": {},
-    "index": 242,
-    "class": {
-      "name": "Barbarian",
-      "url": "http://www.dnd5eapi.co/api/classes/barbarian"
-    },
-    "subclass": {
-      "name": "Berserker",
-      "url": "http://www.dnd5eapi.co/api/subclasses/1"
-    },
-    "url": "http://www.dnd5eapi.co/api/subclasses/berserker/level/6"
-  },
-  {
-    "level": 10,
-    "feature_choices": [],
-    "features": [
-      {
-        "name": "Intimidating Presence",
-        "url": "http://www.dnd5eapi.co/api/features/14"
-      }
-    ],
-    "spellcasting": {},
-    "class": {
-      "name": "Barbarian",
-      "url": "http://www.dnd5eapi.co/api/classes/barbarian"
-    },
-    "subclass": {
-      "name": "Berserker",
-      "url": "http://www.dnd5eapi.co/api/subclasses/1"
-    },
-    "url": "http://www.dnd5eapi.co/api/subclasses/berserker/level/10",
-    "index": 243
-  },
-  {
-    "level": 14,
-    "feature_choices": [],
-    "features": [
-      {
-        "name": "Retaliation",
-        "url": "http://www.dnd5eapi.co/api/features/18"
-      }
-    ],
-    "spellcasting": {},
-    "class": {
-      "name": "Barbarian",
-      "url": "http://www.dnd5eapi.co/api/classes/barbarian"
-    },
-    "subclass": {
-      "name": "Berserker",
-      "url": "http://www.dnd5eapi.co/api/subclasses/1"
-    },
-    "url": "http://www.dnd5eapi.co/api/subclasses/berserker/level/14",
-    "index": 244
   },
   {
     "level": 3,

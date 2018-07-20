@@ -101,7 +101,7 @@ module CharacterExt
     (self.cha - 10) / 2
   end
 
-  def pro_bo
+  def prof_bonus
     if level > 16
       return 6
     end

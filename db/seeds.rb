@@ -41,116 +41,116 @@ persuasion.save
 ####################################################
 ##  Weapons
 ####################################################
-club = Weapon.new(group: 'Simple', category: 'Melee', name: 'Club', cost: '1 sp', damage: '1d4 bludgeoning', weight: 2)
+club = Weapon.new(group: 'Simple', category: 'Melee', name: 'Club', cost_qty: '1', cost_unit: 'sp', damage: '1d4 bludgeoning', weight: 2)
 club.save
 Weaponprop.new(weapon: club, name: 'Light').save
 
-dagger = Weapon.new(group: 'Simple', category: 'Melee', name: 'Dagger', cost: '2 gp', damage: '1d4 piercing', weight: 1)
+dagger = Weapon.new(group: 'Simple', category: 'Melee', name: 'Dagger', cost_qty: '2', cost_unit: 'gp', damage: '1d4 piercing', weight: 1)
 dagger.save
 Weaponprop.new(weapon: dagger, name: 'Fittness').save
 Weaponprop.new(weapon: dagger, name: 'Light').save
 Weaponprop.new(weapon: dagger, name: 'Thrown', attr: 'Range 20/60').save
 
-great_club = Weapon.new(group: 'Simple', category: 'Melee', name: 'Greatclub', cost: '2 sp', damage: '1d8 bludgeoning', weight: 10)
+great_club = Weapon.new(group: 'Simple', category: 'Melee', name: 'Greatclub', cost_qty: '2', cost_unit: 'sp', damage: '1d8 bludgeoning', weight: 10)
 great_club.save
 Weaponprop.new(weapon: great_club, name: 'Two-handed').save
 
-handaxe = Weapon.new(group: 'Simple', category: 'Melee', name: 'Handaxe', cost: '5 gp', damage: '1d6 slashing', weight: 2)
+handaxe = Weapon.new(group: 'Simple', category: 'Melee', name: 'Handaxe', cost_qty: '5', cost_unit: 'gp', damage: '1d6 slashing', weight: 2)
 handaxe.save
 Weaponprop.new(weapon: handaxe, name: 'Light').save
 Weaponprop.new(weapon: handaxe, name: 'Thrown', attr: 'Range 20/60').save
 
-javlin = Weapon.new(group: 'Simple', category: 'Melee', name: 'Javelin', cost: '5 sp', damage: '1d6 piercing', weight: 2)
+javlin = Weapon.new(group: 'Simple', category: 'Melee', name: 'Javelin', cost_qty: '5', cost_unit: 'sp', damage: '1d6 piercing', weight: 2)
 javlin.save
 Weaponprop.new(weapon: javlin, name: 'Thrown', attr: 'Range 30/100').save
 
-light_hammer = Weapon.new(group: 'Simple', category: 'Melee', name: 'Light hammer', cost: '2 gp', damage: '1d4 bludgeoning', weight: 2)
+light_hammer = Weapon.new(group: 'Simple', category: 'Melee', name: 'Light hammer', cost_qty: '2', cost_unit: 'gp', damage: '1d4 bludgeoning', weight: 2)
 light_hammer.save
 Weaponprop.new(weapon: light_hammer, name: 'Light').save
 Weaponprop.new(weapon: light_hammer, name: 'Thrown', attr: 'Range 20/60').save
 
-Weapon.new(group: 'Simple', category: 'Melee', name: 'Mace', cost: '5 gp', damage: '1d6 bludgeoning', weight: 2).save
+Weapon.new(group: 'Simple', category: 'Melee', name: 'Mace', cost_qty: '5', cost_unit: 'gp', damage: '1d6 bludgeoning', weight: 2).save
 
-quarterstaff = Weapon.new(group: 'Simple', category: 'Melee', name: 'Quarterstaff', cost: '2 sp', damage: '1d6 bludgeoning', weight: 2)
+quarterstaff = Weapon.new(group: 'Simple', category: 'Melee', name: 'Quarterstaff', cost_qty: '2', cost_unit: 'sp', damage: '1d6 bludgeoning', weight: 2)
 quarterstaff.save
 Weaponprop.new(weapon: quarterstaff, name: 'Versatile', attr: '1d8').save
 
-spear = Weapon.new(group: 'Simple', category: 'Melee', name: 'Spear', cost: '1 gp', damage: '1d6 piercing', weight: 3)
+spear = Weapon.new(group: 'Simple', category: 'Melee', name: 'Spear', cost_qty: '1', cost_unit: 'gp', damage: '1d6 piercing', weight: 3)
 spear.save
 Weaponprop.new(weapon: spear, name: 'Versatile', attr: '1d8').save
 Weaponprop.new(weapon: spear, name: 'Thrown', attr: 'Range 20/60').save
 
-crossbow_light = Weapon.new(group: 'Simple', category: 'Ranged', name: 'Crossbow light', cost: '25 gp', damage: '1d8 piercing', weight: 5)
+crossbow_light = Weapon.new(group: 'Simple', category: 'Ranged', name: 'Crossbow light', cost_qty: '25', cost_unit: 'gp', damage: '1d8 piercing', weight: 5)
 crossbow_light.save
 Weaponprop.new(weapon: crossbow_light, name: 'Ammunition', attr: 'Range 80/320').save
 Weaponprop.new(weapon: crossbow_light, name: 'Loading').save
 Weaponprop.new(weapon: crossbow_light, name: 'Two-handed').save
 
-shortbow = Weapon.new(group: 'Simple', category: 'Ranged', name: 'Shortbow', cost: '25 gp', damage: '1d6 piercing', weight: 2)
+shortbow = Weapon.new(group: 'Simple', category: 'Ranged', name: 'Shortbow', cost_qty: '25', cost_unit: 'gp', damage: '1d6 piercing', weight: 2)
 shortbow.save
 Weaponprop.new(weapon: shortbow, name: 'Ammunition', attr: 'Range 80/320').save
 Weaponprop.new(weapon: shortbow, name: 'Two-handed').save
 
-weapon = Weapon.new(group: 'Martial', category: 'Melee', name: 'Battleaxe', cost: '10 gp', damage: '1d8 slashing', weight: 4)
+weapon = Weapon.new(group: 'Martial', category: 'Melee', name: 'Battleaxe', cost_qty: '10', cost_unit: 'gp', damage: '1d8 slashing', weight: 4)
 weapon.save
 Weaponprop.new(weapon: weapon, name: 'Versatile', attr: '1d10').save
 
-Weapon.new(group: 'Martial', category: 'Melee', name: 'Greataxe', cost: '30 gp', damage: '1d12 slashing', weight: 7).save
+Weapon.new(group: 'Martial', category: 'Melee', name: 'Greataxe', cost_qty: '30', cost_unit: 'gp', damage: '1d12 slashing', weight: 7).save
 Weaponprop.new(weapon: weapon, name: 'Heavy').save
 Weaponprop.new(weapon: weapon, name: 'Two-handed').save
 
-greataxe = Weapon.new(group: 'Martial', category: 'Melee', name: 'Greataxe', cost: '30 gp', damage: '1d12 slashing', weight: 7)
+greataxe = Weapon.new(group: 'Martial', category: 'Melee', name: 'Greataxe', cost_qty: '30', cost_unit: 'gp', damage: '1d12 slashing', weight: 7)
 greataxe.save
 Weaponprop.new(weapon: greataxe, name: 'Heavy').save
 Weaponprop.new(weapon: greataxe, name: 'Two-handed').save
 
-longsword = Weapon.new(group: 'Martial', category: 'Melee', name: 'Longsword', cost: '15 gp', damage: '1d8 slashing', weight: 3)
+longsword = Weapon.new(group: 'Martial', category: 'Melee', name: 'Longsword', cost_qty: '15', cost_unit: 'gp', damage: '1d8 slashing', weight: 3)
 longsword.save
 Weaponprop.new(weapon: longsword, name: 'Versatile', attr: '1d10').save
 
-maul = Weapon.new(group: 'Martial', category: 'Melee', name: 'Maul', cost: '10 gp', damage: '2d6 bludgeoning', weight: 10)
+maul = Weapon.new(group: 'Martial', category: 'Melee', name: 'Maul', cost_qty: '10', cost_unit: 'gp', damage: '2d6 bludgeoning', weight: 10)
 maul.save
 Weaponprop.new(weapon: maul, name: 'Heavy').save
 Weaponprop.new(weapon: maul, name: 'Two-handed').save
 
-Weapon.new(group: 'Martial', category: 'Melee', name: 'Morningstar', cost: '15 gp', damage: '1d8 piercing', weight: 4).save
+Weapon.new(group: 'Martial', category: 'Melee', name: 'Morningstar', cost_qty: '15', cost_unit: 'gp', damage: '1d8 piercing', weight: 4).save
 
-rapier = Weapon.new(group: 'Martial', category: 'Melee', name: 'Rapier', cost: '25 gp', damage: '1d8 piercing', weight: 2)
+rapier = Weapon.new(group: 'Martial', category: 'Melee', name: 'Rapier', cost_qty: '25', cost_unit: 'gp', damage: '1d8 piercing', weight: 2)
 rapier.save
 Weaponprop.new(weapon: rapier, name: 'Finesse').save
 
-scimitar = Weapon.new(group: 'Martial', category: 'Melee', name: 'Scimitar', cost: '25 gp', damage: '1d6 slashing', weight: 3)
+scimitar = Weapon.new(group: 'Martial', category: 'Melee', name: 'Scimitar', cost_qty: '25', cost_unit: 'gp', damage: '1d6 slashing', weight: 3)
 scimitar.save
 Weaponprop.new(weapon: scimitar, name: 'Finesse').save
 Weaponprop.new(weapon: scimitar, name: 'Light').save
 
-shortsword = Weapon.new(group: 'Martial', category: 'Melee', name: 'Shortsword', cost: '10 gp', damage: '1d6 slashing', weight: 2)
+shortsword = Weapon.new(group: 'Martial', category: 'Melee', name: 'Shortsword', cost_qty: '10', cost_unit: 'gp', damage: '1d6 slashing', weight: 2)
 shortsword.save
 Weaponprop.new(weapon: shortsword, name: 'Finesse').save
 Weaponprop.new(weapon: shortsword, name: 'Light').save
 
-trident = Weapon.new(group: 'Martial', category: 'Melee', name: 'Trident', cost: '5 gp', damage: '1d6 piercing', weight: 4)
+trident = Weapon.new(group: 'Martial', category: 'Melee', name: 'Trident', cost_qty: '5', cost_unit: 'gp', damage: '1d6 piercing', weight: 4)
 trident.save
 Weaponprop.new(weapon: trident, name: 'Thrown', attr: 'Range 20/60').save
 Weaponprop.new(weapon: trident, name: 'Versatile', attr: '1d10').save
 
-warhammer = Weapon.new(group: 'Martial', category: 'Melee', name: 'Warhammer', cost: '15 gp', damage: '1d8 bludgeoning', weight: 2)
+warhammer = Weapon.new(group: 'Martial', category: 'Melee', name: 'Warhammer', cost_qty: '15', cost_unit: 'gp', damage: '1d8 bludgeoning', weight: 2)
 Weaponprop.new(weapon: warhammer, name: 'Versatile', attr: '1d10').save
 
-crossbow_hand = Weapon.new(group: 'Martial', category: 'Ranged', name: 'Crossbow, hand', cost: '75 gp', damage: '1d6 piercing', weight: 3)
+crossbow_hand = Weapon.new(group: 'Martial', category: 'Ranged', name: 'Crossbow, hand', cost_qty: '75', cost_unit: 'gp', damage: '1d6 piercing', weight: 3)
 crossbow_hand.save
 Weaponprop.new(weapon: crossbow_hand, name: 'Ammunition', attr: 'Range 30/120').save
 Weaponprop.new(weapon: crossbow_hand, name: 'Light').save
 Weaponprop.new(weapon: crossbow_hand, name: 'Loading').save
 
-crossbow_heavy = Weapon.new(group: 'Martial', category: 'Ranged', name: 'Crossbow, heavy', cost: '50 gp', damage: '1d10 piercing', weight: 18)
+crossbow_heavy = Weapon.new(group: 'Martial', category: 'Ranged', name: 'Crossbow, heavy', cost_qty: '50', cost_unit: 'gp', damage: '1d10 piercing', weight: 18)
 crossbow_heavy.save
 Weaponprop.new(weapon: crossbow_heavy, name: 'Ammunition', attr: 'Range 100/400').save
 Weaponprop.new(weapon: crossbow_heavy, name: 'Heavy').save
 Weaponprop.new(weapon: crossbow_heavy, name: 'Loading').save
 Weaponprop.new(weapon: crossbow_heavy, name: 'Two-handed').save
 
-longbow = Weapon.new(group: 'Martial', category: 'Ranged', name: 'Longbow', cost: '50 gp', damage: '1d8 piercing', weight: 2)
+longbow = Weapon.new(group: 'Martial', category: 'Ranged', name: 'Longbow', cost_qty: '50', cost_unit: 'gp', damage: '1d8 piercing', weight: 2)
 longbow.save
 Weaponprop.new(weapon: longbow, name: 'Ammunition', attr: 'Range 150/600').save
 Weaponprop.new(weapon: longbow, name: 'Heavy').save
@@ -159,25 +159,25 @@ Weaponprop.new(weapon: longbow, name: 'Two-handed').save
 ####################################################
 ##  Armor
 ####################################################
-leather = Armor.new(group: 'Light', name: 'Leather', cost: '10 gp', ac: 11, weight: 10)
+leather = Armor.new(group: 'Light', name: 'Leather', cost_qty: '10', cost_unit: 'gp', ac: 11, weight: 10)
 leather.save
-studded_leather = Armor.new(group: 'Light', name: 'Studded leather', cost: '45 gp', ac: 12, weight: 13)
+studded_leather = Armor.new(group: 'Light', name: 'Studded leather', cost_qty: '45', cost_unit: 'gp', ac: 12, weight: 13)
 studded_leather.save
-hide = Armor.new(group: 'Medium', name: 'Hide', cost: '10 gp', ac: 12, weight: 12)
+hide = Armor.new(group: 'Medium', name: 'Hide', cost_qty: '10 gp', ac: 12, weight: 12)
 hide.save
-chain_shirt = Armor.new(group: 'Medium', name: 'Chain shirt', cost: '50 gp', ac: 13, weight: 20)
+chain_shirt = Armor.new(group: 'Medium', name: 'Chain shirt', cost_qty: '50', cost_unit: 'gp', ac: 13, weight: 20)
 chain_shirt.save
-scale_mail = Armor.new(group: 'Medium', name: 'Scale mail', cost: '50 gp', ac: 14, weight: 45)
+scale_mail = Armor.new(group: 'Medium', name: 'Scale mail', cost_qty: '50', cost_unit: 'gp', ac: 14, weight: 45)
 scale_mail.save
-breastplate = Armor.new(group: 'Medium', name: 'Breastplate', cost: '400 gp', ac: 14, weight: 20)
+breastplate = Armor.new(group: 'Medium', name: 'Breastplate', cost_qty: '400', cost_unit: 'gp', ac: 14, weight: 20)
 breastplate.save
-ring_mail = Armor.new(group: 'Heavy', name: 'Ring mail', cost: '30 gp', ac: 14, weight: 40)
+ring_mail = Armor.new(group: 'Heavy', name: 'Ring mail', cost_qty: '30', cost_unit: 'gp', ac: 14, weight: 40)
 ring_mail.save
-chain_mail = Armor.new(group: 'Heavy', name: 'Chain mail', cost: '75 gp', ac: 16, weight: 55)
+chain_mail = Armor.new(group: 'Heavy', name: 'Chain mail', cost_qty: '75 gp', cost_unit: 'gp', ac: 16, weight: 55)
 chain_mail.save
-splint = Armor.new(group: 'Heavy', name: 'Splint', cost: '200 gp', ac: 17, weight: 60)
+splint = Armor.new(group: 'Heavy', name: 'Splint', cost_qty: '200', cost_unit: 'gp', ac: 17, weight: 60)
 splint.save
-shield = Armor.new(group: 'Shield', name: 'Shield', cost: '10 gp', ac: 2, weight: 60)
+shield = Armor.new(group: 'Shield', name: 'Shield', cost_qty: '10', cost_unit: 'gp', ac: 2, weight: 60)
 shield.save
 
 ####################################################
@@ -320,63 +320,87 @@ wizard.save
 ####################################################
 ##  Items
 ####################################################
-Item.new(name: 'Arrows (20)', cost: '1 gp', weight: 1).save
-Item.new(name: 'Crossbow bolts (20)', cost: '1gp', weight: 0.5).save
-Item.new(name: 'Backpack', cost: '2gp', weight: 5).save
-Item.new(name: 'Bedroll', cost: '2 gp', weight: 7).save
-Item.new(name: 'Bell', cost: '1 gp', weight: 0).save
-Item.new(name: 'Blanket', cost: '5 sp', weight: 3).save
-Item.new(name: 'Book', cost: '25 gp', weight: 5).save
-Item.new(name: 'Candle', cost: '1 cp', weight: 0).save
-Item.new(name: 'Carpenter\'s tools', cost: '8 gp', weight: 6).save
-Item.new(name: 'Case (scroll or map)', cost: '1 gp', weight: 1).save
-Item.new(name: 'Chalk (1 piece)', cost: '1 cp', weight: 0).save
-Item.new(name: 'Chest', cost: '5 gp', weight: 25).save
-Item.new(name: 'Clothes, common', cost: '5 sp', weight: 3).save
-Item.new(name: 'Clothes, fine', cost: '15 gp', weight: 6).save
-Item.new(name: 'Component pouch', cost: '25 gp', weight: 2).save
-Item.new(name: 'Crowbar', cost: '2 gp', weight: 5).save
-Item.new(name: 'Grappling hook', cost: '2 gp', weight: 4).save
-Item.new(name: 'Hammer', cost: '1 gp', weight: 3).save
-Item.new(name: 'Hammer, sledge', cost: '2 gp', weight: 10).save
-Item.new(name: 'Healer\'s kit', cost: '5 gp', weight: 3).save
-Item.new(name: 'Holy symbol', cost: '5 gp', weight: 1).save
-Item.new(name: 'Hourglass', cost: '25 gp', weight: 1).save
-Item.new(name: 'Ink (1 ounce bottle)', cost: '10 gp', weight: 0).save
-Item.new(name: 'Ink pen', cost: '2 cp', weight: 0).save
-Item.new(name: 'Lantern, bullseye', cost: '10 gp', weight: 2).save
-Item.new(name: 'Lantern, hooded', cost: '5 gp', weight: 2).save
-Item.new(name: 'Lock', cost: '10 gp', weight: 1).save
-Item.new(name: 'Mason\'s tools', cost: '10 gp', weight: 8).save
-Item.new(name: 'Mess kit', cost: '2 sp', weight: 1).save
-Item.new(name: 'Mirror, steel', cost: '5 gp', weight: 0.5).save
-Item.new(name: 'Oil (flask)', cost: '1 sp', weight: 1).save
-Item.new(name: 'Paper (one sheet)', cost: '2 sp', weight: 0).save
-Item.new(name: 'Parchment (one sheet)', cost: '1 sp', weight: 0).save
-Item.new(name: 'Perfume (vial)', cost: '5 gp', weight: 0).save
-Item.new(name: 'Pick, miner\'s', cost: '2 gp', weight: 10).save
-Item.new(name: 'Piton', cost: '5 gp', weight: 0.25).save
-Item.new(name: 'Pot, iron', cost: '2 gp', weight: 10).save
-Item.new(name: 'Potion of healing', cost: '50 gp', weight: 0.25).save
-Item.new(name: 'Playing cards', cost: '5 sp', weight: 0).save
-Item.new(name: 'Pouch', cost: '5 sp', weight: 1).save
-Item.new(name: 'Rations (1 day)', cost: '5 sp', weight: 2).save
-Item.new(name: 'Robes', cost: '1 gp', weight: 4).save
-Item.new(name: 'Rope, hempen (50 feet)', cost: '1 gp', weight: 10).save
-Item.new(name: 'Rope, silk (50 feet)', cost: '10 gp', weight: 5).save
-Item.new(name: 'Sack', cost: '1 cp', weight: 0.5).save
-Item.new(name: 'Sealing wax', cost: '5 sp', weight: 0).save
-Item.new(name: 'Shovel', cost: '2 gp', weight: 5).save
-Item.new(name: 'Signal whistle', cost: '5 cp', weight: 0).save
-Item.new(name: 'Signet ring', cost: '5 gp', weight: 0).save
-Item.new(name: 'Spellbook', cost: '50 gp', weight: 3).save
-Item.new(name: 'Spike, iron (10)', cost: '1 gp', weight: 5).save
-Item.new(name: 'Tent, two-person', cost: '2 gp', weight: 20).save
-Item.new(name: 'Thieves\' tools', cost: '25 gp', weight: 1).save
-Item.new(name: 'Tinderbox', cost: '5 sp', weight: 1).save
-Item.new(name: 'Torch', cost: '1 cp', weight: 1).save
-Item.new(name: 'Waterskin', cost: '2 sp', weight: 5).save
-Item.new(name: 'Whetstone', cost: '1 cp', weight: 1).save
+Item.new(name: 'Arrows (20)', cost_qty: '1', cost_unit: 'gp', weight: 1).save
+Item.new(name: 'Crossbow bolts (20)', cost_qty: '1gp', weight: 0.5).save
+Item.new(name: 'Backpack', cost_qty: '2gp', weight: 5).save
+Item.new(name: 'Bedroll', cost_qty: '2', cost_unit: 'gp', weight: 7).save
+Item.new(name: 'Bell', cost_qty: '1', cost_unit: 'gp', weight: 0).save
+Item.new(name: 'Blanket', cost_qty: '5', cost_unit: 'sp', weight: 3).save
+Item.new(name: 'Book', cost_qty: '25', cost_unit: 'gp', weight: 5).save
+Item.new(name: 'Candle', cost_qty: '1', cost_unit: 'cp', weight: 0).save
+Item.new(name: 'Carpenter\'s tools', cost_qty: '8', cost_unit: 'gp', weight: 6).save
+Item.new(name: 'Case (scroll or map)', cost_qty: '1', cost_unit: 'gp', weight: 1).save
+Item.new(name: 'Chalk (1 piece)', cost_qty: '1', cost_unit: 'cp', weight: 0).save
+Item.new(name: 'Chest', cost_qty: '5', cost_unit: 'gp', weight: 25).save
+Item.new(name: 'Clothes, common', cost_qty: '5', cost_unit: 'sp', weight: 3).save
+Item.new(name: 'Clothes, fine', cost_qty: '15', cost_unit: 'gp', weight: 6).save
+Item.new(name: 'Component pouch', cost_qty: '25', cost_unit: 'gp', weight: 2).save
+Item.new(name: 'Crowbar', cost_qty: '2', cost_unit: 'gp', weight: 5).save
+Item.new(name: 'Grappling hook', cost_qty: '2', cost_unit: 'gp', weight: 4).save
+Item.new(name: 'Hammer', cost_qty: '1', cost_unit: 'gp', weight: 3).save
+Item.new(name: 'Hammer, sledge', cost_qty: '2', cost_unit: 'gp', weight: 10).save
+Item.new(name: 'Healer\'s kit', cost_qty: '5', cost_unit: 'gp', weight: 3).save
+Item.new(name: 'Holy symbol', cost_qty: '5', cost_unit: 'gp', weight: 1).save
+Item.new(name: 'Hourglass', cost_qty: '25', cost_unit: 'gp', weight: 1).save
+Item.new(name: 'Ink (1 ounce bottle)', cost_qty: '10', cost_unit: 'gp', weight: 0).save
+Item.new(name: 'Ink pen', cost_qty: '2', cost_unit: 'cp', weight: 0).save
+Item.new(name: 'Lantern, bullseye', cost_qty: '10', cost_unit: 'gp', weight: 2).save
+Item.new(name: 'Lantern, hooded', cost_qty: '5', cost_unit: 'gp', weight: 2).save
+Item.new(name: 'Lock', cost_qty: '10', cost_unit: 'gp', weight: 1).save
+Item.new(name: 'Mason\'s tools', cost_qty: '10', cost_unit: 'gp', weight: 8).save
+Item.new(name: 'Mess kit', cost_qty: '2', cost_unit: 'sp', weight: 1).save
+Item.new(name: 'Mirror, steel', cost_qty: '5', cost_unit: 'gp', weight: 0.5).save
+Item.new(name: 'Oil (flask)', cost_qty: '1', cost_unit: 'sp', weight: 1).save
+Item.new(name: 'Paper (one sheet)', cost_qty: '2', cost_unit: 'sp', weight: 0).save
+Item.new(name: 'Parchment (one sheet)', cost_qty: '1', cost_unit: 'sp', weight: 0).save
+Item.new(name: 'Perfume (vial)', cost_qty: '5', cost_unit: 'gp', weight: 0).save
+Item.new(name: 'Pick, miner\'s', cost_qty: '2', cost_unit: 'gp', weight: 10).save
+Item.new(name: 'Piton', cost_qty: '5', cost_unit: 'gp', weight: 0.25).save
+Item.new(name: 'Pot, iron', cost_qty: '2', cost_unit: 'gp', weight: 10).save
+Item.new(name: 'Potion of healing', cost_qty: '50', cost_unit: 'gp', weight: 0.25).save
+Item.new(name: 'Playing cards', cost_qty: '5', cost_unit: 'sp', weight: 0).save
+Item.new(name: 'Pouch', cost_qty: '5', cost_unit: 'sp', weight: 1).save
+Item.new(name: 'Rations (1 day)', cost_qty: '5', cost_unit: 'sp', weight: 2).save
+Item.new(name: 'Robes', cost_qty: '1', cost_unit: 'gp', weight: 4).save
+Item.new(name: 'Rope, hempen (50 feet)', cost_qty: '1', cost_unit: 'gp', weight: 10).save
+Item.new(name: 'Rope, silk (50 feet)', cost_qty: '10', cost_unit: 'gp', weight: 5).save
+Item.new(name: 'Sack', cost_qty: '1', cost_unit: 'cp', weight: 0.5).save
+Item.new(name: 'Sealing wax', cost_qty: '5', cost_unit: 'sp', weight: 0).save
+Item.new(name: 'Shovel', cost_qty: '2', cost_unit: 'gp', weight: 5).save
+Item.new(name: 'Signal whistle', cost_qty: '5', cost_unit: 'cp', weight: 0).save
+Item.new(name: 'Signet ring', cost_qty: '5', cost_unit: 'gp', weight: 0).save
+Item.new(name: 'Spellbook', cost_qty: '50', cost_unit: 'gp', weight: 3).save
+Item.new(name: 'Spike, iron (10)', cost_qty: '1', cost_unit: 'gp', weight: 5).save
+Item.new(name: 'Tent, two-person', cost_qty: '2', cost_unit: 'gp', weight: 20).save
+Item.new(name: 'Thieves\' tools', cost_qty: '25', cost_unit: 'gp', weight: 1).save
+Item.new(name: 'Tinderbox', cost_qty: '5', cost_unit: 'sp', weight: 1).save
+Item.new(name: 'Torch', cost_qty: '1', cost_unit: 'cp', weight: 1).save
+Item.new(name: 'Waterskin', cost_qty: '2', cost_unit: 'sp', weight: 5).save
+Item.new(name: 'Whetstone', cost_qty: '1', cost_unit: 'cp', weight: 1).save
+
+####################################################
+##  Features
+####################################################
+genres = Hash.new
+Genre.all.each do |genre|
+  genres[genre.name] = genre.id
+end
+file = File.read('data/5e-SRD-Features.json')
+data_hash = JSON.parse(file)
+data_hash.each do |feature|
+  genre = feature['class']['name']
+  subclass = feature['subclass']['name']
+  Feature.new(id: feature['index'], genre_id: genres[genre], subclass: subclass, name: feature['name'], desc: feature['desc'].join(" ")).save
+end
+
+####################################################
+##  Conditions
+####################################################
+file = File.read('data/5e-SRD-Conditions.json')
+data_hash = JSON.parse(file)
+data_hash.each do |condition|
+  Condition.new(id: condition['index'], name: condition['name'], desc: condition['desc'].map{|str| str.sub('• ', '')}.join(" ")).save
+end
 
 ####################################################
 ##  Characters
@@ -384,6 +408,7 @@ Item.new(name: 'Whetstone', cost: '1 cp', weight: 1).save
 feren = Character.new(
     race_id: wood_elf.id,
     genre_id: ranger.id,
+    condition_id: 0,
     team: Character::PLAYER,
     name: 'Feren',
     player: 'Cain',
@@ -407,6 +432,7 @@ feren.save
 thorirn = Character.new(
     race_id: half_elf.id,
     genre_id: sorcerer.id,
+    condition_id: 0,
     team: Character::PLAYER,
     name: 'Thorirn',
     player: 'Cain',
@@ -430,6 +456,7 @@ thorirn.save
 bob = Character.new(
     race_id: dragonborn.id,
     genre_id: paladin.id,
+    condition_id: 0,
     team: Character::PLAYER,
     name: 'Bob',
     player: 'Cy',
@@ -451,6 +478,7 @@ bob.save
 cutie = Character.new(
     race_id: half_orc.id,
     genre_id: barbarian.id,
+    condition_id: 0,
     team: Character::PLAYER,
     name: 'Cutie',
     player: 'Cy',
@@ -472,6 +500,7 @@ cutie.save
 savage = Character.new(
     race_id: human.id,
     genre_id: fighter.id,
+    condition_id: 0,
     team: Character::PLAYER,
     name: 'Savage',
     player: 'Rebecca',

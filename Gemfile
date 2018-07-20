@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'pg', '~> 0.21'
 gem 'jquery-rails'
 gem 'rails-ujs'
+gem 'json'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
