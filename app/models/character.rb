@@ -1,9 +1,6 @@
 class Character < ActiveRecord::Base
   include CharacterExt
 
-  PLAYER = 'player'
-  MONSTER = 'monster'
-
   belongs_to :race
   belongs_to :genre
   has_many :armors,  :through => :characters_armors

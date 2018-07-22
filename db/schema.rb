@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2018_07_10_041744) do
     t.integer "condition_id"
     t.integer "race_id"
     t.integer "genre_id"
-    t.string "team", limit: 55
     t.string "name", limit: 55
     t.string "player", limit: 55
     t.string "align", limit: 55
@@ -134,6 +133,66 @@ ActiveRecord::Schema.define(version: 2018_07_10_041744) do
     t.integer "cost_qty"
     t.string "cost_unit", limit: 55
     t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mabilities", force: :cascade do |t|
+    t.integer "monster_id"
+    t.string "name", limit: 55
+    t.text "desc"
+    t.integer "attack_bonus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mactions", force: :cascade do |t|
+    t.integer "monster_id"
+    t.string "name", limit: 55
+    t.text "desc"
+    t.integer "attack_bonus"
+    t.string "damage_dice", limit: 55
+    t.integer "damage_bonus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mlactions", force: :cascade do |t|
+    t.integer "monster_id"
+    t.string "name", limit: 55
+    t.text "desc"
+    t.integer "attack_bonus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "monsters", force: :cascade do |t|
+    t.string "name", limit: 55
+    t.string "size", limit: 55
+    t.string "mtype", limit: 55
+    t.string "msubtype", limit: 55
+    t.string "alignment", limit: 55
+    t.integer "armor_class"
+    t.integer "hit_points"
+    t.string "hit_dice", limit: 55
+    t.string "speed", limit: 255
+    t.integer "str"
+    t.integer "dex"
+    t.integer "con"
+    t.integer "int"
+    t.integer "wis"
+    t.integer "con_save"
+    t.integer "int_save"
+    t.integer "wis_save"
+    t.integer "history"
+    t.integer "perception"
+    t.string "damage_vulnerabilities", limit: 155
+    t.string "damage_resistances", limit: 155
+    t.string "damage_immunities", limit: 155
+    t.string "condition_immunities", limit: 155
+    t.string "senses", limit: 255
+    t.string "languages", limit: 255
+    t.string "challenge_rating", limit: 55
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

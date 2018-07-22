@@ -1,31 +1,25 @@
 desc "Parse JSON File"
 task :parse_json_file => :environment do
 
-  #file = File.read('data/5e-SRD-Conditions.json')
-  #data_hash = JSON.parse(file)
-  #data_hash.each do |condition|
-  #  p "#{condition['name']}"
-  #  condition['desc'].each do |desc|
-  #    p desc.sub! '• ', ''
-  #  end
-  #end
-
-  #file = File.read('data/5e-SRD-Damage-Types.json')
-  #data_hash = JSON.parse(file)
-  #data_hash.each do |type|
-  #  p "#{type['name']} #{type['desc'][0]}"
-  #end
-
-  file = File.read('data/5e-SRD-Levels.json')
+  file = File.read('data/5e-SRD-Monsters.json')
   data_hash = JSON.parse(file)
-  data_hash.each do |level|
-    genre = level['class']['name']
-    p "#{level['level']} #{genre} #{level['features'].join(',').sub('http://www.dnd5eapi.co/api/features/','')}"
-    #level['features'].each do |feature|
-    #  p "    feature: #{feature['url'].sub('http://www.dnd5eapi.co/api/features/','')}"
-    #end
+  data_hash.each do |mon|
+    monster = Monster.new()
+    unless mon['actions'].nil?
+      mon['actions'].each do |action|
+        Maction.new(monster_id: monster.id, name: action['name'], desc: action['desc'], attack_bonus: action['attack_bonus'], damage_dice: action['damage_dice'], damage_bonus: action['damage_bonus'])
+      end
+    end
+    unless mon['special_abilities'].nil?
+      mon['special_abilities'].each do |ability|
+        Mability.new(monster_id: monster.id, name: ability['name'], desc: ability['desc'], attack_bonus: ability['attack_bonus'])
+      end
+    end
+    unless mon['legendary_actions'].nil?
+      mon['legendary_actions'].each do |action|
+        Maction.new(monster_id: monster.id, name: action['name'], desc: action['desc'], attack_bonus: action['attack_bonus'], damage_dice: action['damage_dice'], damage_bonus: action['damage_bonus'])
+      end
+    end
   end
-
-
 
 end

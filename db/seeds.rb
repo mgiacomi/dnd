@@ -394,6 +394,58 @@ data_hash.each do |feature|
 end
 
 ####################################################
+##  Monsters
+####################################################
+file = File.read('data/5e-SRD-Monsters.json')
+data_hash = JSON.parse(file)
+data_hash.each do |mon|
+#  "speed": "10 ft., swim 40 ft.",
+  monster = Monster.new(id: mon['index'],
+                        name: mon['name'],
+                        size: mon['size'],
+                        mtype: mon['type'],
+                        msubtype: mon['subtype'],
+                        alignment: mon['alignment'],
+                        armor_class: mon['armor_class'],
+                        hit_points: mon['hit_points'],
+                        hit_dice: mon['hit_dice'],
+                        speed: mon['speed'],
+                        str: mon['strength'],
+                        dex: mon['dexterity'],
+                        con: mon['constitution'],
+                        int: mon['intelligence'],
+                        wis: mon['wisdom'],
+                        con_save: mon['constitution_save'],
+                        int_save: mon['intelligence_save'],
+                        wis_save: mon['wisdom_save'],
+                        history: mon['history'],
+                        perception: mon['perception'],
+                        damage_vulnerabilities: mon['damage_vulnerabilities'],
+                        damage_resistances: mon['damage_resistances'],
+                        damage_immunities: mon['damage_immunities'],
+                        condition_immunities: mon['condition_immunities'],
+                        senses: mon['senses'],
+                        languages: mon['languages'],
+                        challenge_rating: mon['challenge_rating'])
+      monster.save
+  unless mon['actions'].nil?
+    mon['actions'].each do |action|
+      Maction.new(monster_id: monster.id, name: action['name'], desc: action['desc'], attack_bonus: action['attack_bonus'], damage_dice: action['damage_dice'], damage_bonus: action['damage_bonus']).save
+    end
+  end
+  unless mon['special_abilities'].nil?
+    mon['special_abilities'].each do |ability|
+      Mability.new(monster_id: monster.id, name: ability['name'], desc: ability['desc'], attack_bonus: ability['attack_bonus']).save
+    end
+  end
+  unless mon['legendary_actions'].nil?
+    mon['legendary_actions'].each do |action|
+      Maction.new(monster_id: monster.id, name: action['name'], desc: action['desc'], attack_bonus: action['attack_bonus'], damage_dice: action['damage_dice'], damage_bonus: action['damage_bonus']).save
+    end
+  end
+end
+
+####################################################
 ##  Conditions
 ####################################################
 file = File.read('data/5e-SRD-Conditions.json')
@@ -409,7 +461,6 @@ feren = Character.new(
     race_id: wood_elf.id,
     genre_id: ranger.id,
     condition_id: 0,
-    team: Character::PLAYER,
     name: 'Feren',
     player: 'Cain',
     align: 'Neutral good',
@@ -433,7 +484,6 @@ thorirn = Character.new(
     race_id: half_elf.id,
     genre_id: sorcerer.id,
     condition_id: 0,
-    team: Character::PLAYER,
     name: 'Thorirn',
     player: 'Cain',
     align: 'Chaotic good',
@@ -457,7 +507,6 @@ bob = Character.new(
     race_id: dragonborn.id,
     genre_id: paladin.id,
     condition_id: 0,
-    team: Character::PLAYER,
     name: 'Bob',
     player: 'Cy',
     align: 'Lawful good',
@@ -479,7 +528,6 @@ cutie = Character.new(
     race_id: half_orc.id,
     genre_id: barbarian.id,
     condition_id: 0,
-    team: Character::PLAYER,
     name: 'Cutie',
     player: 'Cy',
     align: 'Chaotic neutral',
@@ -501,7 +549,6 @@ savage = Character.new(
     race_id: human.id,
     genre_id: fighter.id,
     condition_id: 0,
-    team: Character::PLAYER,
     name: 'Savage',
     player: 'Rebecca',
     align: 'Lawful good',
