@@ -390,7 +390,29 @@ data_hash = JSON.parse(file)
 data_hash.each do |feature|
   genre = feature['class']['name']
   subclass = feature['subclass']['name']
-  Feature.new(id: feature['index'], genre_id: genres[genre], subclass: subclass, name: feature['name'], desc: feature['desc'].join(" ")).save
+  Feature.new(id: feature['index'], genre_id: genres[genre], subclass: subclass, name: feature['name'], desc: feature['desc'].join(" "), level: feature['level']).save
+end
+
+####################################################
+##  Spells
+####################################################
+genres = Hash.new
+Genre.all.each do |genre|
+  genres[genre.name] = genre
+end
+file = File.read('data/5e-SRD-Spells.json')
+data_hash = JSON.parse(file)
+data_hash.each do |s|
+  higher_level = s['higher_level'].nil? ? '' : s['higher_level'].join(" ")
+  spell = Spell.new(id: s['index'], name: s['name'], desc: s['desc'].join(" "), higher_level: higher_level,
+                    range: s['range'], components: s['components'].join(" "), ritual: s['ritual'], duration: s['duration'],
+                    concentration: s['concentration'], casting_time: s['casting_time'], level: s['level'])
+
+  s['classes'].each do |c|
+    spell.genres << genres[c['name']]
+  end
+
+  spell.save
 end
 
 ####################################################
@@ -399,7 +421,6 @@ end
 file = File.read('data/5e-SRD-Monsters.json')
 data_hash = JSON.parse(file)
 data_hash.each do |mon|
-#  "speed": "10 ft., swim 40 ft.",
   monster = Monster.new(id: mon['index'],
                         name: mon['name'],
                         size: mon['size'],

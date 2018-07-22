@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_10_041744) do
+ActiveRecord::Schema.define(version: 2018_07_10_041746) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2018_07_10_041744) do
   end
 
   create_table "features", force: :cascade do |t|
-    t.integer "level_id"
+    t.integer "level"
     t.integer "genre_id"
     t.string "subclass", limit: 55
     t.string "name", limit: 55
@@ -119,6 +119,13 @@ ActiveRecord::Schema.define(version: 2018_07_10_041744) do
     t.bigint "skill_id", null: false
     t.index ["genre_id", "skill_id"], name: "index_genres_skills_on_genre_id_and_skill_id"
     t.index ["skill_id", "genre_id"], name: "index_genres_skills_on_skill_id_and_genre_id"
+  end
+
+  create_table "genres_spells", id: false, force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "spell_id", null: false
+    t.index ["genre_id", "spell_id"], name: "index_genres_spells_on_genre_id_and_spell_id"
+    t.index ["spell_id", "genre_id"], name: "index_genres_spells_on_spell_id_and_genre_id"
   end
 
   create_table "genres_weapons", id: false, force: :cascade do |t|
@@ -215,6 +222,21 @@ ActiveRecord::Schema.define(version: 2018_07_10_041744) do
     t.string "name", limit: 55
     t.string "modifier", limit: 55
     t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spells", force: :cascade do |t|
+    t.string "name", limit: 55
+    t.text "desc"
+    t.text "higher_level"
+    t.string "range", limit: 55
+    t.string "components", limit: 55
+    t.string "ritual", limit: 55
+    t.string "duration", limit: 55
+    t.string "concentration", limit: 55
+    t.string "casting_time", limit: 55
+    t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
