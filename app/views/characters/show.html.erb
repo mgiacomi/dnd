@@ -32,12 +32,47 @@
       Proficency: <%= @character.prof_bonus %><br/>
     </td>
     <td>
-      <% @spells.each do |spell| %>
+      <% @spells.select{|spell| spell.level == 0}.each do |spell| %>
         <%= spell.name %> <%= spell.level %><br/>
       <% end %>
     </td>
     <td>
-      <% @spells.each do |spell| %>
+      <% @spells.select{|spell| spell.level == 1}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 2}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 3}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 4}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 5}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 6}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 7}.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td>
+      <% @spells.select{|spell| spell.level == 8}.each do |spell| %>
         <%= spell.name %> <%= spell.level %><br/>
       <% end %>
     </td>
