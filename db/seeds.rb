@@ -500,6 +500,10 @@ feren.skills << animal_handling
 feren.skills << perception
 feren.skills << stealth
 feren.save
+Weaponitem.new(character: feren, weapon: shortsword, qty: 2).save
+Weaponitem.new(character: feren, weapon: longbow, qty: 1).save
+Armoritem.new(character: feren, armor: scale_mail, qty: 1).save
+Inventoryitem.new(item: p)
 
 thorirn = Character.new(
     race_id: half_elf.id,
