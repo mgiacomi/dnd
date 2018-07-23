@@ -10,7 +10,7 @@ class CreateSpells < ActiveRecord::Migration[5.2]
       t.string   "duration",       limit: 55
       t.string   "concentration",  limit: 55
       t.string   "casting_time",   limit: 55
-      t.integer  "level",       limit: 4
+      t.integer  "level",          limit: 4
       t.timestamps
     end
   end
