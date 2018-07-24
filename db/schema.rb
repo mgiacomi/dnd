@@ -122,9 +122,9 @@ ActiveRecord::Schema.define(version: 2018_07_10_041746) do
   create_table "inventoryitems", force: :cascade do |t|
     t.integer "qty"
     t.integer "character_id"
-    t.integer "inventory_id"
-    t.index ["character_id", "inventory_id"], name: "index_inventoryitems_on_character_id_and_inventory_id"
-    t.index ["inventory_id", "character_id"], name: "index_inventoryitems_on_inventory_id_and_character_id"
+    t.integer "item_id"
+    t.index ["character_id", "item_id"], name: "index_inventoryitems_on_character_id_and_item_id"
+    t.index ["item_id", "character_id"], name: "index_inventoryitems_on_item_id_and_character_id"
   end
 
   create_table "items", force: :cascade do |t|
