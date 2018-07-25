@@ -61,10 +61,10 @@ module CharacterExt
     if self.xp >= 14000
       return 6
     end
-    if self.xp >= 65000
+    if self.xp >= 6500
       return 5
     end
-    if self.xp >= 27000
+    if self.xp >= 2700
       return 4
     end
     if self.xp >= 900
