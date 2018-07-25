@@ -10,6 +10,7 @@ class CharactersController < ApplicationController
   # GET /characters/1
   # GET /characters/1.json
   def show
+    @spells = @character.genre.spells.where("level <= ?", @character.level).order(:level)
   end
 
   # GET /characters/new

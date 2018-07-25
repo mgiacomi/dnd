@@ -320,63 +320,13 @@ wizard.save
 ####################################################
 ##  Items
 ####################################################
-Item.new(name: 'Arrows (20)', cost_qty: '1', cost_unit: 'gp', weight: 1).save
-Item.new(name: 'Crossbow bolts (20)', cost_qty: '1gp', weight: 0.5).save
-Item.new(name: 'Backpack', cost_qty: '2gp', weight: 5).save
-Item.new(name: 'Bedroll', cost_qty: '2', cost_unit: 'gp', weight: 7).save
-Item.new(name: 'Bell', cost_qty: '1', cost_unit: 'gp', weight: 0).save
-Item.new(name: 'Blanket', cost_qty: '5', cost_unit: 'sp', weight: 3).save
-Item.new(name: 'Book', cost_qty: '25', cost_unit: 'gp', weight: 5).save
-Item.new(name: 'Candle', cost_qty: '1', cost_unit: 'cp', weight: 0).save
-Item.new(name: 'Carpenter\'s tools', cost_qty: '8', cost_unit: 'gp', weight: 6).save
-Item.new(name: 'Case (scroll or map)', cost_qty: '1', cost_unit: 'gp', weight: 1).save
-Item.new(name: 'Chalk (1 piece)', cost_qty: '1', cost_unit: 'cp', weight: 0).save
-Item.new(name: 'Chest', cost_qty: '5', cost_unit: 'gp', weight: 25).save
-Item.new(name: 'Clothes, common', cost_qty: '5', cost_unit: 'sp', weight: 3).save
-Item.new(name: 'Clothes, fine', cost_qty: '15', cost_unit: 'gp', weight: 6).save
-Item.new(name: 'Component pouch', cost_qty: '25', cost_unit: 'gp', weight: 2).save
-Item.new(name: 'Crowbar', cost_qty: '2', cost_unit: 'gp', weight: 5).save
-Item.new(name: 'Grappling hook', cost_qty: '2', cost_unit: 'gp', weight: 4).save
-Item.new(name: 'Hammer', cost_qty: '1', cost_unit: 'gp', weight: 3).save
-Item.new(name: 'Hammer, sledge', cost_qty: '2', cost_unit: 'gp', weight: 10).save
-Item.new(name: 'Healer\'s kit', cost_qty: '5', cost_unit: 'gp', weight: 3).save
-Item.new(name: 'Holy symbol', cost_qty: '5', cost_unit: 'gp', weight: 1).save
-Item.new(name: 'Hourglass', cost_qty: '25', cost_unit: 'gp', weight: 1).save
-Item.new(name: 'Ink (1 ounce bottle)', cost_qty: '10', cost_unit: 'gp', weight: 0).save
-Item.new(name: 'Ink pen', cost_qty: '2', cost_unit: 'cp', weight: 0).save
-Item.new(name: 'Lantern, bullseye', cost_qty: '10', cost_unit: 'gp', weight: 2).save
-Item.new(name: 'Lantern, hooded', cost_qty: '5', cost_unit: 'gp', weight: 2).save
-Item.new(name: 'Lock', cost_qty: '10', cost_unit: 'gp', weight: 1).save
-Item.new(name: 'Mason\'s tools', cost_qty: '10', cost_unit: 'gp', weight: 8).save
-Item.new(name: 'Mess kit', cost_qty: '2', cost_unit: 'sp', weight: 1).save
-Item.new(name: 'Mirror, steel', cost_qty: '5', cost_unit: 'gp', weight: 0.5).save
-Item.new(name: 'Oil (flask)', cost_qty: '1', cost_unit: 'sp', weight: 1).save
-Item.new(name: 'Paper (one sheet)', cost_qty: '2', cost_unit: 'sp', weight: 0).save
-Item.new(name: 'Parchment (one sheet)', cost_qty: '1', cost_unit: 'sp', weight: 0).save
-Item.new(name: 'Perfume (vial)', cost_qty: '5', cost_unit: 'gp', weight: 0).save
-Item.new(name: 'Pick, miner\'s', cost_qty: '2', cost_unit: 'gp', weight: 10).save
-Item.new(name: 'Piton', cost_qty: '5', cost_unit: 'gp', weight: 0.25).save
-Item.new(name: 'Pot, iron', cost_qty: '2', cost_unit: 'gp', weight: 10).save
-Item.new(name: 'Potion of healing', cost_qty: '50', cost_unit: 'gp', weight: 0.25).save
-Item.new(name: 'Playing cards', cost_qty: '5', cost_unit: 'sp', weight: 0).save
-Item.new(name: 'Pouch', cost_qty: '5', cost_unit: 'sp', weight: 1).save
-Item.new(name: 'Rations (1 day)', cost_qty: '5', cost_unit: 'sp', weight: 2).save
-Item.new(name: 'Robes', cost_qty: '1', cost_unit: 'gp', weight: 4).save
-Item.new(name: 'Rope, hempen (50 feet)', cost_qty: '1', cost_unit: 'gp', weight: 10).save
-Item.new(name: 'Rope, silk (50 feet)', cost_qty: '10', cost_unit: 'gp', weight: 5).save
-Item.new(name: 'Sack', cost_qty: '1', cost_unit: 'cp', weight: 0.5).save
-Item.new(name: 'Sealing wax', cost_qty: '5', cost_unit: 'sp', weight: 0).save
-Item.new(name: 'Shovel', cost_qty: '2', cost_unit: 'gp', weight: 5).save
-Item.new(name: 'Signal whistle', cost_qty: '5', cost_unit: 'cp', weight: 0).save
-Item.new(name: 'Signet ring', cost_qty: '5', cost_unit: 'gp', weight: 0).save
-Item.new(name: 'Spellbook', cost_qty: '50', cost_unit: 'gp', weight: 3).save
-Item.new(name: 'Spike, iron (10)', cost_qty: '1', cost_unit: 'gp', weight: 5).save
-Item.new(name: 'Tent, two-person', cost_qty: '2', cost_unit: 'gp', weight: 20).save
-Item.new(name: 'Thieves\' tools', cost_qty: '25', cost_unit: 'gp', weight: 1).save
-Item.new(name: 'Tinderbox', cost_qty: '5', cost_unit: 'sp', weight: 1).save
-Item.new(name: 'Torch', cost_qty: '1', cost_unit: 'cp', weight: 1).save
-Item.new(name: 'Waterskin', cost_qty: '2', cost_unit: 'sp', weight: 5).save
-Item.new(name: 'Whetstone', cost_qty: '1', cost_unit: 'cp', weight: 1).save
+file = File.read('data/5e-SRD-Equipment.json')
+data_hash = JSON.parse(file)
+data_hash.each do |i|
+  if i['equipment_category'] == 'Adventuring Gear'
+    Item.new(name: i['name'], cost_qty: i['cost']['quantity'], cost_unit: i['cost']['unit'], weight: i['weight']).save
+  end
+end
 
 ####################################################
 ##  Features
@@ -500,6 +450,10 @@ feren.skills << animal_handling
 feren.skills << perception
 feren.skills << stealth
 feren.save
+Weaponitem.new(character: feren, weapon: shortsword, qty: 2).save
+Weaponitem.new(character: feren, weapon: longbow, qty: 1).save
+Armoritem.new(character: feren, armor: scale_mail, qty: 1).save
+Inventoryitem.new(item: p)
 
 thorirn = Character.new(
     race_id: half_elf.id,

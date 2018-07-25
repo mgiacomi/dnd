@@ -15,6 +15,14 @@ ActiveRecord::Schema.define(version: 2018_07_10_041746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "armoritems", force: :cascade do |t|
+    t.integer "qty"
+    t.integer "character_id"
+    t.integer "armor_id"
+    t.index ["armor_id", "character_id"], name: "index_armoritems_on_armor_id_and_character_id"
+    t.index ["character_id", "armor_id"], name: "index_armoritems_on_character_id_and_armor_id"
+  end
+
   create_table "armors", force: :cascade do |t|
     t.string "group", limit: 55
     t.string "name", limit: 55
@@ -24,14 +32,6 @@ ActiveRecord::Schema.define(version: 2018_07_10_041746) do
     t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "armors_characters", id: false, force: :cascade do |t|
-    t.bigint "character_id", null: false
-    t.bigint "armor_id", null: false
-    t.integer "qty"
-    t.index ["armor_id", "character_id"], name: "index_armors_characters_on_armor_id_and_character_id"
-    t.index ["character_id", "armor_id"], name: "index_armors_characters_on_character_id_and_armor_id"
   end
 
   create_table "armors_genres", id: false, force: :cascade do |t|
@@ -61,27 +61,11 @@ ActiveRecord::Schema.define(version: 2018_07_10_041746) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "characters_items", id: false, force: :cascade do |t|
-    t.bigint "character_id", null: false
-    t.bigint "item_id", null: false
-    t.integer "qty"
-    t.index ["character_id", "item_id"], name: "index_characters_items_on_character_id_and_item_id"
-    t.index ["item_id", "character_id"], name: "index_characters_items_on_item_id_and_character_id"
-  end
-
   create_table "characters_skills", id: false, force: :cascade do |t|
     t.bigint "character_id", null: false
     t.bigint "skill_id", null: false
     t.index ["character_id", "skill_id"], name: "index_characters_skills_on_character_id_and_skill_id"
     t.index ["skill_id", "character_id"], name: "index_characters_skills_on_skill_id_and_character_id"
-  end
-
-  create_table "characters_weapons", id: false, force: :cascade do |t|
-    t.bigint "character_id", null: false
-    t.bigint "weapon_id", null: false
-    t.integer "qty"
-    t.index ["character_id", "weapon_id"], name: "index_characters_weapons_on_character_id_and_weapon_id"
-    t.index ["weapon_id", "character_id"], name: "index_characters_weapons_on_weapon_id_and_character_id"
   end
 
   create_table "conditions", force: :cascade do |t|
@@ -133,6 +117,14 @@ ActiveRecord::Schema.define(version: 2018_07_10_041746) do
     t.bigint "weapon_id", null: false
     t.index ["genre_id", "weapon_id"], name: "index_genres_weapons_on_genre_id_and_weapon_id"
     t.index ["weapon_id", "genre_id"], name: "index_genres_weapons_on_weapon_id_and_genre_id"
+  end
+
+  create_table "inventoryitems", force: :cascade do |t|
+    t.integer "qty"
+    t.integer "character_id"
+    t.integer "item_id"
+    t.index ["character_id", "item_id"], name: "index_inventoryitems_on_character_id_and_item_id"
+    t.index ["item_id", "character_id"], name: "index_inventoryitems_on_item_id_and_character_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -239,6 +231,14 @@ ActiveRecord::Schema.define(version: 2018_07_10_041746) do
     t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "weaponitems", force: :cascade do |t|
+    t.integer "qty"
+    t.integer "character_id"
+    t.integer "weapon_id"
+    t.index ["character_id", "weapon_id"], name: "index_weaponitems_on_character_id_and_weapon_id"
+    t.index ["weapon_id", "character_id"], name: "index_weaponitems_on_weapon_id_and_character_id"
   end
 
   create_table "weaponprops", force: :cascade do |t|

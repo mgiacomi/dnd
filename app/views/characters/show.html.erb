@@ -3,27 +3,52 @@
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>
 <br/><br/>
-Name: <%= @character.name %><br/>
-Race: <%= @character.race.name %><br/>
-Class: <%= @character.genre.name %><br/>
-Player: <%= @character.player %><br/>
-Align: <%= @character.align %><br/>
-Background: <%= @character.background %><br/>
-Exp: <%= @character.xp %><br/>
-Level: <%= @character.level %><br/>
-HP Start: <%= @character.genre.hp_start %><br/>
-HP Max: <%= @character.hp_max %><br/>
-HP: <%= @character.hp %><br/>
-Strength: <%= @character.str %><br/>
-Str Mod: <%= @character.str_mod %><br/>
-Dexterity: <%= @character.dex %><br/>
-Dex Mod: <%= @character.dex_mod %><br/>
-Constitution: <%= @character.con %><br/>
-Con Mod: <%= @character.con_mod %><br/>
-Intelligence: <%= @character.int %><br/>
-Int Mod: <%= @character.int_mod %><br/>
-Wisdom: <%= @character.wis %><br/>
-Wis Mod: <%= @character.wis_mod %><br/>
-Charisma: <%= @character.cha %><br/>
-Cha Mod: <%= @character.cha_mod %><br/>
-Proficency: <%= @character.prof_bonus %><br/>
+<table>
+  <tr>
+    <td valign="top">
+      <b>Character:</b><br/>
+      Name: <%= @character.name %><br/>
+      Race: <%= @character.race.name %><br/>
+      Class: <%= @character.genre.name %><br/>
+      Player: <%= @character.player %><br/>
+      Align: <%= @character.align %><br/>
+      Background: <%= @character.background %><br/>
+      Exp: <%= @character.xp %><br/>
+      Level: <%= @character.level %><br/>
+      HP Start: <%= @character.genre.hp_start %><br/>
+      HP Max: <%= @character.hp_max %><br/>
+      HP: <%= @character.hp %><br/>
+      Strength: <%= @character.str %><br/>
+      Str Mod: <%= @character.str_mod %><br/>
+      Dexterity: <%= @character.dex %><br/>
+      Dex Mod: <%= @character.dex_mod %><br/>
+      Constitution: <%= @character.con %><br/>
+      Con Mod: <%= @character.con_mod %><br/>
+      Intelligence: <%= @character.int %><br/>
+      Int Mod: <%= @character.int_mod %><br/>
+      Wisdom: <%= @character.wis %><br/>
+      Wis Mod: <%= @character.wis_mod %><br/>
+      Charisma: <%= @character.cha %><br/>
+      Cha Mod: <%= @character.cha_mod %><br/>
+      Proficency: <%= @character.prof_bonus %><br/>
+    </td>
+    <td valign="top">
+      <b>Spells:</b><br/>
+      <% @spells.each do |spell| %>
+        <%= spell.name %> <%= spell.level %><br/>
+      <% end %>
+    </td>
+    <td valign="top">
+      <b>Armors:</b><br/>
+      <% @character.armoritems.each do |armoritem| %>
+        <%= armoritem.armor.name %><br/>
+      <% end %>
+    </td>
+    <td valign="top">
+      <b>Weapons:</b><br/>
+      <% @character.weaponitems.each do |weaponitem| %>
+        <%= weaponitem.weapon.name %> (<%= weaponitem.qty %>)<br/>
+      <% end %>
+    </td>
+  </tr>
+</table>
