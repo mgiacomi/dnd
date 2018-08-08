@@ -2,7 +2,6 @@
 /*Header*/
 
 body{
-    background-image:url(../images/pictures/bg.jpg);
     background-position: top left;
     background-repeat:repeat;
 }
@@ -36,7 +35,7 @@ body{
 .header .header-logo{
     font-weight:900;
     text-transform: uppercase;
-    width:80px;
+    width:120px;
     margin:0 auto!important;
     height:60px;
     line-height:60px;
