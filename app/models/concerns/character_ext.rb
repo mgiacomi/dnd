@@ -8,6 +8,10 @@ module CharacterExt
   end
 
   def hp_max
+    if self.genre.nil?
+      return 0
+    end
+
     hp = self.genre.hp_start + con_mod
     if level > 1
       hp = (self.genre.hp_start + con_mod) + ((self.genre.hp_plus_level + con_mod) * (level - 1))
@@ -16,6 +20,9 @@ module CharacterExt
   end
 
   def level
+    if self.xp.nil?
+      return 0
+    end
     if self.xp >= 355000
       return 20
     end
@@ -78,27 +85,39 @@ module CharacterExt
   end
 
   def str_mod
-    (self.str - 10) / 2
+    unless self.str.nil?
+      (self.str - 10) / 2
+    end
   end
 
   def dex_mod
-    (self.dex - 10) / 2
+    unless self.dex.nil?
+      (self.dex - 10) / 2
+    end
   end
 
   def con_mod
-    (self.con - 10) / 2
+    unless self.con.nil?
+      (self.con - 10) / 2
+    end
   end
 
   def int_mod
-    (self.int - 10) / 2
+    unless self.int.nil?
+      (self.int - 10) / 2
+    end
   end
 
   def wis_mod
-    (self.wis - 10) / 2
+    unless self.wis.nil?
+      (self.wis - 10) / 2
+    end
   end
 
   def cha_mod
-    (self.cha - 10) / 2
+    unless self.cha.nil?
+      (self.cha - 10) / 2
+    end
   end
 
   def prof_bonus
