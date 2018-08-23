@@ -4830,7 +4830,10 @@ ul.tabs li.current{
 /*---Activity Page---*/
 /*-------------------*/
 
-.activity-status{margin-bottom:30px;}
+.activity-status{
+    margin-bottom:30px;
+    height: 55px;
+}
 .activity-status i{
     font-size:24px;
     width:50px;
@@ -4843,7 +4846,7 @@ ul.tabs li.current{
 .activity-status strong{
     display:block;
     padding-left:70px;
-    margin-top:-10px;
+    margin-top: -3px;
 }
 
 .activity-status em{
@@ -4853,7 +4856,11 @@ ul.tabs li.current{
     font-size:12px;
 }
 
-.activity-item{height:55px; line-height:55px;}
+.activity-item{
+    height:55px;
+    line-height:55px;
+    margin-bottom: 5px;
+}
 .activity-item i{
     position:absolute;
     font-size:8px;
@@ -4862,11 +4869,20 @@ ul.tabs li.current{
     margin-left:10px;
 }
 
-.activity-item strong{font-size:14px; padding-left:40px;}
+.activity-item strong{
+    font-size:14px;
+    padding-left:40px;
+    display:block;
+    padding-left:70px;
+    line-height: 10px;
+    margin-top: 13px;
+}
 .activity-item em{
-    float:right;
     font-size:12px;
     font-style: normal;
+    display:block;
+    padding-left:70px;
+    line-height: 3;
 }
 
 .activity-incident{margin-bottom:30px;}

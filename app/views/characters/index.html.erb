@@ -4,7 +4,6 @@
     <div class="heading-strip bg-2">
       <h3>Characters</h3>
       <p>All your current characters</p>
-      <i class="ion-alert"></i>
       <div class="overlay dark-overlay"></div>
     </div>
     <div class="decoration decoration-margins"></div>
@@ -22,134 +21,25 @@
     </tbody>
     </table>
 
-    <%= link_to 'New Character', new_character_path %>
 
     <div class="content full-top">
+      <%= link_to 'Create New Character', new_character_path %>
+
       <div class="activity-page">
-        <div class="activity-status">
-          <i class="ion-ios-checkmark-outline bg-green-dark"></i>
-          <strong>All Systems Operatinal </strong>
-          <em>Updated: 1 Minute Ago</em>
-        </div>
-
-        <div class="activity-item one-half-responsive">
-          <i class="ion-record color-green-dark"></i>
-          <strong>System Servers</strong>
-          <em>Operational</em>
-        </div>
-        <div class="activity-item one-half-responsive last-column">
-          <i class="ion-record color-green-dark"></i>
-          <strong>Email Servers</strong>
-          <em>Operational</em>
-        </div>
-        <div class="activity-item one-half-responsive">
-          <i class="ion-record color-blue-dark"></i>
-          <strong>Purchase API's</strong>
-          <em>In Progress</em>
-        </div>
-        <div class="activity-item one-half-responsive last-column">
-          <i class="ion-record color-orange-light"></i>
-          <strong>Forum Servers</strong>
-          <em>Investigating </em>
-        </div>
-        <div class="activity-item one-half-responsive">
-          <i class="ion-record color-red-light"></i>
-          <strong>Spam Filters</strong>
-          <em>Maintenance</em>
-        </div>
-        <div class="activity-item one-half-responsive last-column">
-          <i class="ion-record color-green-dark"></i>
-          <strong>Signup Systems</strong>
-          <em>Operational</em>
-        </div>
-        <div class="activity-item one-half-responsive">
-          <i class="ion-record color-green-dark"></i>
-          <strong>Signup Systems</strong>
-          <em>Operational</em>
-        </div>
-        <div class="activity-item one-half-responsive last-column full-bottom">
-          <i class="ion-record color-orange-light"></i>
-          <strong>Backup Server</strong>
-          <em>Processing</em>
-        </div>
-        <div class="clear"></div>
-
-        <div class="activity-incident one-half-responsive">
-          <h3>Purchase API <i class="ion-record color-blue-dark"></i></h3>
-          <em>January 12, 2021</em>
-          <p class="half-bottom">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Etiam rutrum, diam et suscipit pulvinar, ligula sem lacinia nulla,
-            at ornare turpis diam at metus.
-          </p>
-          <strong>Status:<span class="color-blue-dark">In Progress</span></strong>
-          <a href="#"><i class="ion-link"></i> Read More</a>
-          <div class="clear"></div>
-        </div>
-
-        <div class="decoration hide-if-responsive"></div>
-
-        <div class="activity-incident one-half-responsive last-column">
-          <h3>Forum Servers <i class="ion-record color-orange-light"></i></h3>
-          <em>May 12, 2021</em>
-          <p class="half-bottom">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Etiam rutrum, diam et suscipit pulvinar, ligula sem lacinia nulla,
-            at ornare turpis diam at metus.
-          </p>
-          <strong>Status:<span class="color-orange-dark">Investigating</span></strong>
-          <a href="#"><i class="ion-link"></i> Read More</a>
-          <div class="clear"></div>
-        </div>
-
-        <div class="decoration"></div>
-
-        <div class="activity-incident one-half-responsive">
-          <h3>Spam Filters <i class="ion-record color-red-light"></i></h3>
-          <em>July 12, 2021</em>
-          <p class="half-bottom">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Etiam rutrum, diam et suscipit pulvinar, ligula sem lacinia nulla,
-            at ornare turpis diam at metus.
-          </p>
-          <strong>Status:<span class="color-red-dark">Maintenance</span></strong>
-          <a href="#"><i class="ion-link"></i> Read More</a>
-          <div class="clear"></div>
-        </div>
-
-        <div class="activity-incident one-half-responsive last-column">
-          <h3>Backup Server <i class="ion-record color-orange-light"></i></h3>
-          <em>September 12, 2021</em>
-          <p class="half-bottom">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Etiam rutrum, diam et suscipit pulvinar, ligula sem lacinia nulla,
-            at ornare turpis diam at metus.
-          </p>
-          <strong>Status:<span class="color-red-dark">Backing Up Data</span></strong>
-          <a href="#"><i class="ion-link"></i> Read More</a>
-          <div class="clear"></div>
-        </div>
-
+        <% @characters.each_with_index do |character, idx| %>
+          <div class="activity-status one-half-responsive <% if idx.odd? %>last-column<% end %>">
+            <img style="position:absolute;width:50px;height:50px;" src="\images\headshots\dwarf.png"/>
+            <strong><%= character.name %></strong>
+            <em>Human Fighter, Level 5</em>
+            <div style="float:right;margin-top: -35px;font-size:12px;">Wrath of Souls</div>
+          </div>
+        <% end %>
       </div>
     </div>
 
-    <div class="decoration decoration-margins"></div>
+    <div class="decoration decoration-margins" style="height:0;"></div>
 
     <div class="footer footer-dark">
-      <a href="index.html" class="footer-logo scale-hover"></a>
-      <p>
-        Simplicity and complexity packed into a beautiful,
-        feature filled, powerful, gorgeous mobile template.
-      </p>
-      <div class="footer-socials">
-        <a href="#" class="icon icon-round icon-ghost icon-xs facebook-bg"><i class="ion-social-facebook"></i></a>
-        <a href="#" class="icon icon-round icon-ghost icon-xs twitter-bg"><i class="ion-social-twitter"></i></a>
-        <a href="#" class="icon icon-round icon-ghost icon-xs google-bg"><i class="ion-social-googleplus"></i></a>
-        <a href="#" class="icon icon-round icon-ghost icon-xs phone-bg"><i class="ion-ios-telephone"></i></a>
-        <a href="#" class="icon icon-round icon-ghost icon-xs show-share-bottom border-magenta-dark"><i class="ion-android-share"></i></a>
-        <a href="#" class="icon icon-round icon-ghost icon-xs back-to-top border-blue-light"><i class="ion-arrow-up-b"></i></a>
-      </div>
-      <div class="decoration"></div>
       <p class="copyright-text">Copyright <span id="copyright-year"></span>. All Rights Reserved.</p>
     </div>
   </div>
