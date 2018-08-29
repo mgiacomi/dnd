@@ -11,19 +11,61 @@
     </div>
   <% end %>
 
-  Name: <%= f.text_field :name %><br/>
-  Race: <%= f.text_field :race %><br/>
-  Genre: <%= f.text_field :genre_id %><br/>
-  Player: <%= f.text_field :player %><br/>
-  Align: <%= f.text_field :align %><br/>
-  Background: <%= f.text_field :background %><br/>
-  Strength: <%= f.text_field :str %><br/>
-  Dexterity: <%= f.text_field :dex %><br/>
-  Constitution: <%= f.text_field :con %><br/>
-  Intelligence: <%= f.text_field :int %><br/>
-  Wisdom: <%= f.text_field :wis %><br/>
-  Charisma: <%= f.text_field :cha %><br/>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="clear"></div>
+  <div class="one-half-responsive">
+    <div class="content">
+      <div class="input-icon">
+        Name: <%= f.text_field :name, style: 'padding-right:0;', class: 'input-text-box input-blue-border' %>
+      </div>
+      <div class="input-icon">
+        Race: <%= f.select :genre_id, Race.all.collect { |c| [ c.name, c.id ] }, {include_blank: false},
+                           {class: 'input-text-box input-blue-border', style: 'background-color:#18262c;'} %>
+      </div>
+      <div class="input-icon">
+        Genre: <%= f.select :genre_id, Genre.all.collect { |c| [ c.name, c.id ] }, {include_blank: false},
+                            {class: 'input-text-box input-blue-border', style: 'background-color:#18262c;'} %>
+      </div>
+      <div class="input-icon">
+        Align: <%= f.select :align,
+                            options_for_select([['Neutral', 'Neutral'], ['Chaotic', 'Chaotic']], :align),
+                            {}, {:class => 'input-text-box input-blue-border', style: 'background-color:#18262c;'} %>
+      </div>
+      <div class="input-icon">
+        Background: <%= f.select :background,
+                                 options_for_select([['Good', 'Good'], ['Evil', 'Evil']], :background),
+                            {}, {:class => 'input-text-box input-blue-border', style: 'background-color:#18262c;'} %>
+      </div>
+    </div>
+  </div>
+  <div class="one-half-responsive last-column">
+    <div class="content">
+      <div class="input-icon">
+        Strength: <%= f.text_field :str, class: 'input-text-box input-blue-border' %>
+      </div>
+      <div class="input-icon">
+        Dexterity: <%= f.text_field :dex, class: 'input-text-box input-blue-border' %>
+      </div>
+      <div class="input-icon">
+        Constitution: <%= f.text_field :con, class: 'input-text-box input-blue-border' %>
+      </div>
+      <div class="input-icon">
+        Intelligence: <%= f.text_field :int, class: 'input-text-box input-blue-border' %>
+      </div>
+      <div class="input-icon">
+        Wisdom: <%= f.text_field :wis, class: 'input-text-box input-blue-border' %>
+      </div>
+      <div class="input-icon">
+        Charisma: <%= f.text_field :cha, class: 'input-text-box input-blue-border' %>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="clear"></div>
+  <div class="one-half-responsive">
+    <div class="content">
+      <div class="input-icon">
+        <%= f.submit class: 'button button-blue', style: 'width:150px;' %>
+      </div>
+    </div>
   </div>
 <% end %>

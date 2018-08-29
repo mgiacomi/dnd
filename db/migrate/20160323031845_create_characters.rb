@@ -5,7 +5,6 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
       t.integer  "race_id",      limit: 4
       t.integer  "genre_id",     limit: 4
       t.string   "name",         limit: 55
-      t.string   "player",       limit: 55
       t.string   "align",        limit: 55
       t.string   "background",   limit: 55
       t.integer  "xp",           limit: 4
