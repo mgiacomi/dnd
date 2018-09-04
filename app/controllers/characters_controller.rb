@@ -17,6 +17,7 @@ class CharactersController < ApplicationController
     @character = Character.new(character_params)
     @character.xp = 0
     @character.hp = @character.hp_max
+    @character.status = 'step1'
 
     respond_to do |format|
       if @character.save
